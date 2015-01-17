@@ -10,6 +10,7 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
-Alloy.Collections.categories = Alloy.createCollection('category');
-Alloy.Collections.sites = Alloy.createCollection('site');
-Alloy.Collections.gtypes = Alloy.createCollection('gtype');
+var data = require ('data');
+
+Alloy.Globals.categories = data.data.categories;
+Alloy.Globals.sites = data.data.sites;
