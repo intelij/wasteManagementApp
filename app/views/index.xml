@@ -1,7 +1,6 @@
 <Alloy>
 	<Window class="container" >
-		<Label id="label" onClick="doClick">Hello, Alok</Label>
 		<TextField id="searchText" onChange="searchWord"/>
-		<TableView id="resultsTable"></TableView>
+		<TableView id="resultsTable" onClick="selectWord"></TableView>
 	</Window>
 </Alloy>

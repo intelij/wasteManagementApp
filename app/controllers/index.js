@@ -1,11 +1,13 @@
 var autocomplete = require('autocomplete');
+/*
 var data = [{
 	title : "recording",
 	synonyms : ['phonograph recording', 'tape record']
 }, {
 	title : "disc",
 	synonyms : ['magnetic disc', 'magnetic disk', 'phonograph record', 'phonograph recording']
-}];
+}];*/
+var data=Alloy.Globals.categories;
 
 
 var auto = new autocomplete.autocomplete(data);
@@ -18,7 +20,8 @@ function showSuggestions(data){
 			title : element.word,
 			hasChild : true,
 			color: "black",
-			height: 40
+			height: 40,
+			discription:element
 		});
 		tableData.push(resultRow);
 	});
@@ -29,10 +32,11 @@ function showSuggestions(data){
 		$.resultsTable.visible = false;
 	}
 	
-	
+}
+function selectWord(e){
+		Alloy.createController('/categories', {data:e.rowData}).getView().open();
 	
 }
-
 function searchWord(e) {
 	if(e.value){
 		var searchResult = auto.search(e.value);
@@ -42,13 +46,5 @@ function searchWord(e) {
 	}
  }  
  
-function doClick(e) {
-	console.log('In doClick');
-	
-	var type_id = Math.round(Math.random() * 100 + 1);
-	console.log("type_id: " + type_id);
-	
-	alert('Aadi has ' + Alloy.Globals.categories[type_id].title);
-}
 
 $.index.open();

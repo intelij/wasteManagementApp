@@ -1,5 +1,5 @@
 var Autocomplete = function(data) {
-	this.data = data;
+	this.data = Object.keys(data).map(function(k) { return data[k] });
 	this.dictionary = [];
 	this.dictionaryItem = {
 		word : "",
@@ -7,7 +7,7 @@ var Autocomplete = function(data) {
 	};
 
 	this.init = function() {
-		var wordsGroup = _.union(_.pluck(this.data, 'title'), _.pluck(this.data, 'synonyms'));
+		var wordsGroup = _.pluck(this.data, 'title');
 
 		var words = [];
 		words = _.uniq(words.concat.apply(words, wordsGroup));
@@ -25,8 +25,8 @@ var Autocomplete = function(data) {
 
 	this.search = function(word) {
 		var results = _.filter(this.dictionary, function(category) {
-			return category.word.search(word) > -1;
-
+			return category.word.toString().toLowerCase().search(word.toString().toLowerCase()) > -1;
+			 
 		});
 		return results;
 	};
