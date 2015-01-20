@@ -9,14 +9,14 @@ var data = {
     1: {
       "name" : "TZed Homes", 
       "types" : {
-        1: {"title" : "General Waste"},
-        2: {"title" : "White Bag"},
-        3: {"title" : "Kitchen Waste"},
-        4: {"title" : "Blue Bag"},
-        5: {"title" : "Hygiene Waste"},
-        6: {"title" : "Syringe Waste"},
-        7: {"title" : "Glass Bottles"},
-        8: {"title" : "Shredder"}
+        1: {"title" : "General Waste", "description" : "This is general waste."},
+        2: {"title" : "White Bag", "description" : "This is the white bag for paper etc."},
+        3: {"title" : "Kitchen Waste", "description" : "This is wet waste picked daily."},
+        4: {"title" : "Blue Bag", "description" : "This is the blue bag for plastics/metal."},
+        5: {"title" : "Hygiene Waste", "description" : "This is hygeine waste - goes into yellow bag."},
+        6: {"title" : "Syringe Waste", "description" : "This is the white box with the lid."},
+        7: {"title" : "Glass Bottles", "description" : "Leave outside your door for pickup"},
+        8: {"title" : "Shredder", "description" : "Your gardener needs to take it to the shredder near clubhouse."}
       },
       "classification" : {
         5 : 6,
@@ -262,13 +262,13 @@ var data = {
     2: {
       "name" : "Palm Meadows",
       "types" : {
-        1: {"title" : "General Waste"},
-        2: {"title" : "Recycle Bag 2"},
-        3: {"title" : "Organic Waste"},
-        4: {"title" : "Recycle Bag 1"},
-        5: {"title" : "Medical Waste"},
-        6: {"title" : "Syringe Waste"},
-        7: {"title" : "Glass Bottles"}
+        1: {"title" : "General Waste", "description" : "Everything that has no other place." },
+        2: {"title" : "Recycle Bag 2", "description" : "Plastics/Metals etc."},
+        3: {"title" : "Organic Waste", "description" : "Kitchen waste for composting."},
+        4: {"title" : "Recycle Bag 1", "description" : "Paper/Newspaper etc."},
+        5: {"title" : "Medical Waste", "description" : "Medicines."},
+        6: {"title" : "Syringe Waste", "description" : "White box with lid."},
+        7: {"title" : "Glass Bottles", "description" : "Leave outside door."}
       },
       "classification" : {
         5 : 5,
@@ -514,9 +514,9 @@ var data = {
     3: {
       "name" : "BBMP",
       "types" : {
-        1: {"title" : "General Waste"},
-        2: {"title" : "Wet Waste"},
-        3: {"title" : "Dry Waste"},
+        1: {"title" : "General Waste", "description" : "Everything goes here." },
+        2: {"title" : "Wet Waste", "description" : "This is for kitchen waste."},
+        3: {"title" : "Dry Waste", "description" : "Paper/Plastics and other recyclables."},
       },
       "classification" : {
         5 : 2,
