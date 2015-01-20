@@ -1,15 +1,15 @@
 var args = arguments[0] || {};
 
-$.categoriesTitle.title=args.data.discription.word;
-$.categoryLabel.text='Category Type: '+args.data.discription.categories[0].type;
-$.discriptionLabel.text='Description:';
-$.discriptionTextarea.hasFocus = false; 
-$.discriptionTextarea.addEventListener('click', function(){
-   if($.discriptionTextarea.hasFocus){
-        $.discriptionTextarea.blur();
-        $.discriptionTextarea.hasFocus = false;
+$.categoriesTitle.title=args.data.description.word;
+$.categoryLabel.text='Category Type: '+args.data.description.categories[0].type;
+$.descriptionLabel.text='Description:';
+$.descriptionTextarea.hasFocus = false; 
+$.descriptionTextarea.addEventListener('click', function(){
+   if($.descriptionTextarea.hasFocus){
+        $.descriptionTextarea.blur();
+        $.descriptionTextarea.hasFocus = false;
    }
    else{
-        $.discriptionTextarea.hasFocus = true;
+        $.descriptionTextarea.hasFocus = true;
    }
 });
