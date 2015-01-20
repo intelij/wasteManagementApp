@@ -1,5 +1,5 @@
 var Autocomplete = function(data) {
-	this.data = Object.keys(data).map(function(k) { return data[k] });
+	this.data = Object.keys(data).map(function(k) { return data[k]; });
 	this.dictionary = [];
 	this.dictionaryItem = {
 		word : "",
