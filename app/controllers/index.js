@@ -8,7 +8,10 @@ var data = [{
 	synonyms : ['magnetic disc', 'magnetic disk', 'phonograph record', 'phonograph recording']
 }];*/
 var data=Alloy.Globals.categories;
-
+var sampleid=1;
+var result=_.findWhere(Alloy.Globals.sites, {
+		"id":sampleid,
+	}); 
 
 var auto = new autocomplete.autocomplete(data);
 
@@ -34,6 +37,11 @@ function showSuggestions(data){
 	
 }
 function selectWord(e){
+	//Object.keys(data).map(function(k){ 
+		
+	//return k; 
+		//});
+		//alert(JSON.stringify(e.rowData.discription.categories[0].title));
 		Alloy.createController('/categories', {data:e.rowData}).getView().open();
 	
 }
