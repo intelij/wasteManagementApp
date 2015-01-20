@@ -1,0 +1,27 @@
+
+"#categoriesTitle": {
+  layout: "vertical",
+	backgroundColor: "gray",
+},
+"#categoryLabel": {
+    top:30,
+    height:'10%',
+    width:'100%',
+    left:10,
+    color:'black'
+},
+"#discriptionLabel": {
+	 top:20,
+    height:'10%',
+    width:'100%',
+    left:10,
+    color:'black'
+},
+"#discriptionTextarea":{
+	top:1,
+	backgroundColor: "white",
+	width:'75%',
+	height:'30%',
+	left:35,
+	touchEnabled:false
+}

@@ -1,15 +1,17 @@
 ".container": {
-	backgroundColor:"white"
-}
-
-"Label": {
-	width: Ti.UI.SIZE,
+	layout: "vertical",
+	backgroundColor: "gray"
+},
+"#searchText": {
+	 top: 50,
+	 left: 10,
+	 right: 10,
+	 borderColor: "white"
+},
+"#resultsTable": {
 	height: Ti.UI.SIZE,
-	color: "#000"
-}
-
-"#label": {
-	font: {
-		fontSize: 12
-	}
+	left: 10,
+	right: 60,
+	backgroundColor: "white",
+	visible: false
 }

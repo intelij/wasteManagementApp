@@ -1,0 +1,7 @@
+<Alloy>
+	<Window id="categoriesTitle">
+		<Label id="categoryLabel"></Label>
+		<Label id="discriptionLabel"></Label>
+		<TextArea id="discriptionTextarea"></TextArea>
+	</Window>
+</Alloy>
