@@ -12,8 +12,8 @@ function showSuggestions(data){
 	var tableData = [];
 	_.each(data, function(element, index, list) {
 		var resultRow =  Ti.UI.createTableViewRow({
-			title : element.word,
-			//hasChild : true,
+			title : element.title,
+			hasChild : true,
 			color: "black",
 			description:element,
 			backgroundColor:"white",
@@ -52,7 +52,7 @@ function selectWord(e){
 function searchWord(e) {
 	if(e.source.value){
 		var searchResult = auto.search(e.source.value);
-    showSuggestions(searchResult);
+    	showSuggestions(searchResult);
 	}else{
 		$.resultsTable.height = 50;
 	}

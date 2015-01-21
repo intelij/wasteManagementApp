@@ -6,7 +6,7 @@ var Autocomplete = function(data, synonyms) {
 		function getSynonyms(array) {
 			var syn = [];
 			_.each(array, function(element, idx) {
-				if (element) {
+				if (element !== null && synonyms[element]) {
 					syn.push(synonyms[element]);
 				}
 			});
@@ -22,7 +22,7 @@ var Autocomplete = function(data, synonyms) {
 
 	this.search = function(word) {
 		var results = _.filter(this.data, function(category) {
-			return category.title.toString().toLowerCase().search(word.toString().toLowerCase()) > -1 || category.synonyms.toString().toLowerCase().search(word.toString().toLowerCase());
+			return category.title.toLowerCase().search(word.toLowerCase()) > -1 || category.synonyms.indexOf(word) > -1;
 
 		});
 		return results;
