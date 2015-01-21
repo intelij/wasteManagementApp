@@ -8,41 +8,55 @@ var complexDetail=_.findWhere(Alloy.Globals.sites, {
 	}); 
 
 var auto = new autocomplete.autocomplete(data, synonyms);
-
 function showSuggestions(data){
-	var results = data;
-	var tableData =  [];
-	_.each(results, function(element, index, list){
+	var tableData = [];
+	_.each(data, function(element, index, list) {
 		var resultRow =  Ti.UI.createTableViewRow({
 			title : element.word,
-			hasChild : true,
+			//hasChild : true,
 			color: "black",
-			height: 40,
-			discription:element
+			description:element,
+			backgroundColor:"white",
+			height:60,
+			top:1
 		});
 		tableData.push(resultRow);
 	});
-	if(tableData.length > 0){
+	
+	if(tableData.length > 0) {	
 		$.resultsTable.data = tableData;
-		$.resultsTable.visible = true;
-	}else{
-		$.resultsTable.visible = false;
+		var rowCount = $.resultsTable.getSections()[0].rowCount;
+		var rowHeight = $.resultsTable.rowHeight;
+		$.resultsTable.height = (rowCount * rowHeight) + 50;
+	} else {
+		$.resultsTable.height = 50;
 	}
-	
 }
+
+function getCategoryId (title){
+	var category ;
+	Object.keys(data).forEach(function(k){
+		if(data[k].title == title){
+			category =  k;
+		}
+	});
+	return category;
+}
+
 function selectWord(e){
-	
-		Alloy.createController('/categories', {data:e.rowData}).getView().open();
-	
+	getCategoryId(e.rowData.title);
+	alert(result);
+	Alloy.createController('/categories', {data:e.rowData}).getView().open();
 }
+
 function searchWord(e) {
-	if(e.value){
-		var searchResult = auto.search(e.value);
-   		showSuggestions(searchResult);
+	if(e.source.value){
+		var searchResult = auto.search(e.source.value);
+    showSuggestions(searchResult);
 	}else{
-		$.resultsTable.visible = false;
+		$.resultsTable.height = 50;
 	}
  }  
- 
 
+$.topbar.setTitle("Waste Segregation");
 $.index.open();

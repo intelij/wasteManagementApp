@@ -1,17 +1,20 @@
 ".container": {
 	layout: "vertical",
-	backgroundColor: "gray"
+	backgroundColor: "#ffffff"
 },
-"#searchText": {
-	 top: 50,
-	 left: 10,
-	 right: 10,
-	 borderColor: "white"
-},
+
 "#resultsTable": {
-	height: Ti.UI.SIZE,
-	left: 10,
-	right: 60,
-	backgroundColor: "white",
-	visible: false
+	top: 10,
+	height:50,
+	width: "98%",
+	backgroundColor: "#87CEFA",
+	visible:true,
+	borderColor: '#87CEFA',
+	borderWidth: 1,
+	borderRadius: 6,
+	rowHeight: 60
+},
+'#searchbar': {
+	backgroundColor:'#87CEFA',
+	hintText:'Enter Text'
 }

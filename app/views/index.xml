@@ -1,6 +1,8 @@
 <Alloy>
-	<Window class="container" >
-		<TextField id="searchText" onChange="searchWord"/>
-		<TableView id="resultsTable" onClick="selectWord"></TableView>
+	<Window class="container" navBarHidden="true"  statusBarStyle="">
+		<Require id="topbar" src="common/navbar"></Require>
+		<TableView id="resultsTable" onClick="selectWord">
+			<SearchView ns="Ti.UI.Android"  id="searchbar" platform="android" onChange="searchWord" />
+		</TableView>
 	</Window>
 </Alloy>

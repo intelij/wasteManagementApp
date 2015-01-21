@@ -1,0 +1,7 @@
+<Alloy>
+	<View class="container">
+		<View id="middleText">
+			<Label id="midText"/>
+		</View>
+	</View>
+</Alloy>

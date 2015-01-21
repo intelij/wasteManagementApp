@@ -1,7 +1,7 @@
 <Alloy>
-	<Window id="categoriesTitle">
+	<Window class="container" navBarHidden="true"  statusBarStyle="">
+		<Require id="topbar" src="common/navbar"></Require>
 		<Label id="categoryLabel"></Label>
 		<Label id="descriptionLabel"></Label>
-		<TextArea id="descriptionTextarea"></TextArea>
 	</Window>
 </Alloy>

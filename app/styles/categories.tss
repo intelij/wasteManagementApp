@@ -1,7 +1,10 @@
-
+".container": {
+	layout: "vertical",
+	backgroundColor: "#ffffff"
+},
 "#categoriesTitle": {
   layout: "vertical",
-	backgroundColor: "gray",
+	backgroundColor: "#ffff",
 },
 "#categoryLabel": {
     top:30,
@@ -10,18 +13,15 @@
     left:10,
     color:'black'
 },
-"#discriptionLabel": {
+"#descriptionLabel": {
 	 top:20,
     height:'10%',
     width:'100%',
     left:10,
     color:'black'
-},
-"#discriptionTextarea":{
-	top:1,
-	backgroundColor: "white",
-	width:'75%',
-	height:'30%',
-	left:35,
-	touchEnabled:false
 }
+/*
+"#searchbar": {
+	search :Titanium.UI.Android.SearchView
+}*/
+
