@@ -65,7 +65,6 @@ function searchWord(e) {
 	} else {
 		$.resultsTable.height = 50;
 	}
-
 }
 
 $.topbar.setTitle("Waste Segregation");
