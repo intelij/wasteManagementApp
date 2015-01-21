@@ -47,10 +47,12 @@ function selectWord (e) {
  
   var categoryID = getCategoryId(e.rowData.title);
   var typeId = complexDetail.classification[categoryID];
-  var typeDesc = complexDetail.types[typeId].title;
+  var typeTitle = complexDetail.types[typeId].title;
+  var typeDescription = complexDetail.types[typeId].description;
   Alloy.createController('/categories', {
     data : e.rowData,
-    type: typeDesc
+    title: typeTitle,
+    description: typeDescription
   }).getView().open();
 }
 
