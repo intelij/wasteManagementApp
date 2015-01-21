@@ -10,21 +10,25 @@ var Autocomplete = function(data, synonyms) {
 					syn.push(synonyms[element]);
 				}
 			});
-			return syn;
+			return _.uniq(_.flatten(syn)).join(',');
 		}
 		_.each(this.data, function(element) {
-			element.synonyms = [];
-			var s = getSynonyms(element.title.split(/[^a-zA-Z0-9]/));
-			element.synonyms = _.uniq(element.synonyms.concat.apply(element.synonyms, s));
+			element.synonyms = getSynonyms(element.title.split(/[^a-zA-Z0-9]/));
+			console.log(element.title + ':' + element.synonyms);
 		});
+		console.log(JSON.stringify(this.data));
 	};
 	this.init();
 
 	this.search = function(word) {
 		var results = _.filter(this.data, function(category) {
-			return category.title.toLowerCase().search(word.toLowerCase()) > -1 || category.synonyms.indexOf(word) > -1;
-
+			if (category.title == "Paint - Concrete/Masonry") {
+				console.log(category.synonyms);
+				console.log("index = " + category.synonyms.search(word));
+			}
+			return (category.title.search(word) > -1) || (category.synonyms.search(word) > -1);
 		});
+		console.log(JSON.stringify(results));
 		return results;
 	};
 };
