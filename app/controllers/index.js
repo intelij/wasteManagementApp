@@ -1,19 +1,13 @@
 var autocomplete = require('autocomplete');
-/*
-var data = [{
-	title : "recording",
-	synonyms : ['phonograph recording', 'tape record']
-}, {
-	title : "disc",
-	synonyms : ['magnetic disc', 'magnetic disk', 'phonograph record', 'phonograph recording']
-}];*/
+var synonyms = require('data').data.synonyms;
+
 var data=Alloy.Globals.categories;
-var sampleid=1;
-var result=_.findWhere(Alloy.Globals.sites, {
-		"id":sampleid,
+var complexId=1;
+var complexDetail=_.findWhere(Alloy.Globals.sites, {
+		"id":complexId,
 	}); 
 
-var auto = new autocomplete.autocomplete(data);
+var auto = new autocomplete.autocomplete(data, synonyms);
 
 function showSuggestions(data){
 	var results = data;
@@ -37,18 +31,14 @@ function showSuggestions(data){
 	
 }
 function selectWord(e){
-	//Object.keys(data).map(function(k){ 
-		
-	//return k; 
-		//});
-		//alert(JSON.stringify(e.rowData.discription.categories[0].title));
+	
 		Alloy.createController('/categories', {data:e.rowData}).getView().open();
 	
 }
 function searchWord(e) {
 	if(e.value){
 		var searchResult = auto.search(e.value);
-   showSuggestions(searchResult);
+   		showSuggestions(searchResult);
 	}else{
 		$.resultsTable.visible = false;
 	}

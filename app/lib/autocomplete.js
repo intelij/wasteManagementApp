@@ -1,32 +1,29 @@
-var Autocomplete = function(data) {
-	this.data = Object.keys(data).map(function(k) { return data[k]; });
-	this.dictionary = [];
-	this.dictionaryItem = {
-		word : "",
-		categories : []
-	};
-
+var Autocomplete = function(data, synonyms) {
+	this.data = Object.keys(data).map(function(k) {
+		return data[k];
+	});
 	this.init = function() {
-		var wordsGroup = _.pluck(this.data, 'title');
-
-		var words = [];
-		words = _.uniq(words.concat.apply(words, wordsGroup));
-		for (var i = 0; i < words.length; i++) {
-			var dictionaryItem = {};
-			dictionaryItem.word = words[i];
-			dictionaryItem.categories = _.filter(this.data, function(data) {
-				return data.title == words[i] || _.contains(data.synonyms, words[i]);
+		function getSynonyms(array) {
+			var syn = [];
+			_.each(array, function(element, idx) {
+				if (element) {
+					syn.push(synonyms[element]);
+				}
 			});
-			this.dictionary.push(dictionaryItem);
+			return syn;
 		}
-		
+		_.each(this.data, function(element) {
+			element.synonyms = [];
+			var s = getSynonyms(element.title.split(/[^a-zA-Z0-9]/));
+			element.synonyms = _.uniq(element.synonyms.concat.apply(element.synonyms, s));
+		});
 	};
 	this.init();
 
 	this.search = function(word) {
-		var results = _.filter(this.dictionary, function(category) {
-			return category.word.toString().toLowerCase().search(word.toString().toLowerCase()) > -1;
-			 
+		var results = _.filter(this.data, function(category) {
+			return category.title.toString().toLowerCase().search(word.toString().toLowerCase()) > -1 || category.synonyms.toString().toLowerCase().search(word.toString().toLowerCase());
+
 		});
 		return results;
 	};
