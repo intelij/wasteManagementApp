@@ -1,5 +1,5 @@
-var args = arguments[0] || {};
+var params = arguments[0] || {};
 
-$.topbar.setTitle(args.data.description.word);
-$.categoryLabel.text = 'Category Type: ' + args.data.description.categories[0].type;
-$.descriptionLabel.text = 'Description:';
+$.topbar.setTitle(params.data.title);
+$.categoryLabel.text = 'Category Type: ' + params.title;
+$.descriptionLabel.text = 'Description: ' + params.description;

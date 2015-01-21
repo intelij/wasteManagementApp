@@ -17,7 +17,7 @@
 	 top:20,
     height:'10%',
     width:'100%',
-    left:10,
+    left:5,
     color:'black'
 }
 /*
