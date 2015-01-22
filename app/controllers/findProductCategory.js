@@ -6,55 +6,56 @@ var data = Alloy.Globals.categories;
 
 var auto = new autocomplete.autocomplete(data, synonyms);
 
- var complexId = params.id;
-  var complexDetail = Alloy.Globals.sites[complexId];
- 
+var complexId = params.id;
+var complexDetail = Alloy.Globals.sites[complexId];
+
 function showSuggestions(data) {
 	var tableData = [];
 	_.each(data, function(element, index, list) {
 		var resultRow = Ti.UI.createTableViewRow({
 			title : element.title,
-			hasChild : true,
 			color : "black",
 			description : element,
 			backgroundColor : "white",
 			height : 60,
-			top : 1
+			borderColor : '#87CEFA',
+			borderWidth : 1,
+			borderRadius : 6,
 		});
 		tableData.push(resultRow);
 	});
 
-  if (tableData.length > 0) {
-    $.resultsTable.data = tableData;
-    var rowCount = $.resultsTable.getSections()[0].rowCount;
-    var rowHeight = $.resultsTable.rowHeight;
-    $.resultsTable.height = (rowCount * rowHeight);
-  } else {
-    $.resultsTable.height = 0;
-  }
+	if (tableData.length > 0) {
+		$.resultsTable.data = tableData;
+		var rowCount = $.resultsTable.getSections()[0].rowCount;
+		var rowHeight = $.resultsTable.rowHeight;
+		$.resultsTable.height = (rowCount * rowHeight);
+	} else {
+		$.resultsTable.height = 0;
+	}
 }
 
 function getCategoryId(title) {
-  var category;
-  Object.keys(data).forEach(function(k) {
-    if (data[k].title == title) {
-      category = k;
-    }
-  });
-  return category;
+	var category;
+	Object.keys(data).forEach(function(k) {
+		if (data[k].title == title) {
+			category = k;
+		}
+	});
+	return category;
 }
 
-function selectWord (e) {
- 
-  var categoryID = getCategoryId(e.rowData.title);
-  var typeId = complexDetail.classification[categoryID];
-  var typeTitle = complexDetail.types[typeId].title;
-  var typeDescription = complexDetail.types[typeId].description;
-  Alloy.createController('/categories', {
-    data : e.rowData,
-    title: typeTitle,
-    description: typeDescription
-  }).getView().open();
+function selectWord(e) {
+
+	var categoryID = getCategoryId(e.rowData.title);
+	var typeId = complexDetail.classification[categoryID];
+	var typeTitle = complexDetail.types[typeId].title;
+	var typeDescription = complexDetail.types[typeId].description;
+	Alloy.createController('/categories', {
+		data : e.rowData,
+		title : typeTitle,
+		description : typeDescription
+	}).getView().open();
 }
 
 function searchWord(e) {
@@ -66,5 +67,9 @@ function searchWord(e) {
 	}
 }
 
+$.topbar.leftNav.addEventListener('click', function(e) {
+	$.index.close();
+});
+$.topbar.left.image = '/common/arrow-left.png';
 $.topbar.setTitle(params.data);
-//$.index.open();
+

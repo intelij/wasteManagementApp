@@ -1,6 +1,9 @@
 <Alloy>
 	<View class="container">
-		<View id="middleText">
+		<View id="leftNav" height="44" width="44" left="0">
+			<ImageView id="left"/>
+		</View>
+		<View id="middleText" left="50" right="50">
 			<Label id="midText"/>
 		</View>
 	</View>

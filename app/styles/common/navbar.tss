@@ -7,14 +7,14 @@
   left:0,
   
 },
-
+"#left": {
+	height: 32,
+	width: 32
+},
 "#middleText": {
-	left: 10,
-	right: 10
+	// /borderColor: "#ffffff"
 },
 "#midText": {
-	 width:"100%",
-	 height:"50%",
 	 color:"white",
 	 textAlign:"center",
 	 font:{

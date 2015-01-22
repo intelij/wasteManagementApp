@@ -1,6 +1,6 @@
 <Alloy>
 	<Window id="index" class="container" navBarHidden="true">
-		<Require id="topbar" src="common/navbar"></Require>
+		<Require id="topbar" src="common/navbar"/>
 		<SearchBar id="searchbar" onChange="searchWord"  width="92%" height="50" top="10"/>
 		<TableView id="resultsTable" onClick="selectWord" searchAsChild="false">
 		</TableView>

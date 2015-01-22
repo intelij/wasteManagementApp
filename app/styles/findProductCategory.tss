@@ -7,12 +7,10 @@
 	top: 10,
 	height:0,
 	width: "92%",
-	backgroundColor: "#87CEFA",
+	backgroundColor: "transparent",
 	visible:true,
-	borderColor: '#87CEFA',
-	borderWidth: 1,
-	borderRadius: 6,
-	rowHeight: 60
+	rowHeight: 60,
+	separatorColor: "white"
 },
 '#searchbar': {
 	backgroundColor:'#87CEFA',
