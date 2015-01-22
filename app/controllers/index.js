@@ -29,6 +29,8 @@ showSearchresult();
  }
  }*/
 
+
+
 function getComplexID(title) {
 	var category;
 	Object.keys(data).forEach(function(k) {
@@ -40,13 +42,42 @@ function getComplexID(title) {
 }
 
 function selectComplex(e) {
+
 	var complexID = getComplexID(e.rowData.title);
 	Alloy.createController('/findProductCategory', {
 		data : e.rowData.title,
 		id : complexID,
 	}).getView().open();
+
+  var complexID = getComplexID(e.rowData.title);
+  var site = Alloy.Collections.gtypes.get(1);
+  if (site) {
+    site.set("site_id", complexID);
+  } else {
+    site = Alloy.createModel('site',{
+      "id" : 1,
+      "site_id" : complexID
+    });
+  }
+  site.save();
+
+  Alloy.createController('/findProductCategory', {
+    data : e.rowData.title,
+    id : complexID,
+  }).getView().open();
+
 }
 
 $.topbar.setTitle("Waste Segregation");
-$.index.open();
-//Alloy.createController('findProductCategory').getView().open();
+
+var site = Alloy.Collections.gtypes.get(1);
+
+if (!site) {
+  $.index.open();
+} else {
+  var site_id = site.get('site_id');
+  Alloy.createController('/findProductCategory', {
+    data : data[site_id].name,
+    id : site_id
+  }).getView().open();
+}
