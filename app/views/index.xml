@@ -1,9 +1,9 @@
 <Alloy>
 	<Window class="container" navBarHidden="true"  statusBarStyle="">
-		<!-- <Require id="topbar" src="common/navbar"></Require>
-		<SearchView ns="Ti.UI.Android"  id="searchbar" platform="android"  />
-		<SearchBar platform="ios" id="searchComplex"  />
-		<TableView id="" >
-		</TableView> -->
+		<Require id="topbar" src="common/navbar"></Require>
+		<Label id="complexLabel"></Label>
+		<TableView id="complexTable"  onClick="selectComplex">
+			<SearchView ns="Ti.UI.Android"  id="complexSearchbar" platform="android"/>
+		</TableView> 
 	</Window>
 </Alloy>
