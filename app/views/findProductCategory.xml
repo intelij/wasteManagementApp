@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="index" class="container" navBarHidden="true"  statusBarStyle="">
+	<Window class="container" navBarHidden="true"  statusBarStyle="">
 		<Require id="topbar" src="common/navbar"></Require>
 		<TableView id="resultsTable" onClick="selectWord">
 			<SearchView ns="Ti.UI.Android"  id="searchbar" platform="android" onChange="searchWord" />

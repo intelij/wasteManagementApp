@@ -1,3 +1,4 @@
+var params = arguments[0] || {};
 var autocomplete = require('autocomplete');
 var synonyms = require('data').data.synonyms;
 
@@ -5,7 +6,7 @@ var data = Alloy.Globals.categories;
 
 var auto = new autocomplete.autocomplete(data, synonyms);
 
- var complexId = 1;
+ var complexId = params.id;
   var complexDetail = Alloy.Globals.sites[complexId];
  
 function showSuggestions(data) {
@@ -67,5 +68,5 @@ function searchWord(e) {
 	}
 }
 
-$.topbar.setTitle("Waste Segregation");
+$.topbar.setTitle(params.data);
 //$.index.open();
