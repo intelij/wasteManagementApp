@@ -14,3 +14,8 @@ var data = require ('data');
 
 Alloy.Collections.sites = Alloy.createCollection('site');
    
+Alloy.Globals.categories = data.data.categories;
+Alloy.Globals.sites = data.data.sites;
+Alloy.Collections.categories = Alloy.createCollection('category');
+Alloy.Collections.sites = Alloy.createCollection('site');
+Alloy.Collections.gtypes = Alloy.createCollection('gtype');
