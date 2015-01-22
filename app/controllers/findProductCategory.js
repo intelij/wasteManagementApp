@@ -11,7 +11,6 @@ var auto = new autocomplete.autocomplete(data, synonyms);
 function showSuggestions(data) {
 	var tableData = [];
 	_.each(data, function(element, index, list) {
-		console.log('showSuggestion ' + element.title);
 		var resultRow = Ti.UI.createTableViewRow({
 			title : element.title,
 			hasChild : true,
@@ -28,9 +27,9 @@ function showSuggestions(data) {
     $.resultsTable.data = tableData;
     var rowCount = $.resultsTable.getSections()[0].rowCount;
     var rowHeight = $.resultsTable.rowHeight;
-    $.resultsTable.height = (rowCount * rowHeight) + 50;
+    $.resultsTable.height = (rowCount * rowHeight);
   } else {
-    $.resultsTable.height = 50;
+    $.resultsTable.height = 0;
   }
 }
 
@@ -60,10 +59,9 @@ function selectWord (e) {
 function searchWord(e) {
 	if (e.source.value) {
 		var searchResult = auto.search(e.source.value);
-		console.log("searchWord" + JSON.stringify(searchResult));
 		showSuggestions(searchResult);
 	} else {
-		$.resultsTable.height = 50;
+		$.resultsTable.height = 0;
 	}
 }
 

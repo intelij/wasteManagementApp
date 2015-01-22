@@ -1,9 +1,8 @@
 <Alloy>
-	<Window id="index" class="container" navBarHidden="true"  statusBarStyle="">
+	<Window id="index" class="container" navBarHidden="true">
 		<Require id="topbar" src="common/navbar"></Require>
-		<TableView id="resultsTable" onClick="selectWord">
-			<SearchView ns="Ti.UI.Android"  id="searchbar" platform="android" onChange="searchWord" />
-			<SearchBar platform="ios" id="searchbar" onChange="searchWord" />
+		<SearchBar id="searchbar" onChange="searchWord"  width="92%" height="50" top="10"/>
+		<TableView id="resultsTable" onClick="selectWord" searchAsChild="false">
 		</TableView>
 	</Window>
 </Alloy>
