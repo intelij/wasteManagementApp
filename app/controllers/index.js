@@ -10,7 +10,7 @@ function showSearchresult() {
 			backgroundColor : "white",
 			height : 60,
 			borderColor : '#87CEFA',
-			borderWidth : 1,
+			borderWidth : 2,
 			borderRadius : 6,
 			textAlign: "center"
 		});

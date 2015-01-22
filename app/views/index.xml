@@ -3,7 +3,7 @@
 		<Require id="topbar" src="common/navbar"></Require>
 		<Label id="complexLabel"></Label>
 		<TableView id="complexTable"  onClick="selectComplex">
-			<SearchView ns="Ti.UI.Android"  id="complexSearchbar" platform="android"/>
+			<SearchBar id="complexSearchbar" hintText="Enter Your Complex Name"/>
 		</TableView> 
 	</Window>
 </Alloy>
