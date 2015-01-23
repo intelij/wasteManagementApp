@@ -1514,41 +1514,53 @@ var data = {
 			"types" : {
 				1 : {
 					"title" : "General Waste",
-					"description" : "This is general waste."
+					"description" : "This is general waste. Put in a bag and keep outside for collection."
 				},
 				2 : {
 					"title" : "White Bag",
-					"description" : "This is the white bag for paper etc."
+					"description" : "Paper and Cardboard. This goes for recycling to Smarthanam. No soiled paper/tissue."
 				},
 				3 : {
 					"title" : "Kitchen Waste",
-					"description" : "This is wet waste picked daily."
+					"description" : "This goes for composting in the digestor. Use any container with lid. No plastic/paper liner."
 				},
 				4 : {
-					"title" : "Blue Bag",
-					"description" : "This is the blue bag for plastics/metal."
+					"title" : "Light Blue Bag",
+					"description" : "Plastic + Metal + Tetrapak. This goes for recycling to Smarthanam. No bulbs, tube lights, thermometers."
 				},
 				5 : {
-					"title" : "Hygiene Waste",
-					"description" : "This is hygeine waste - goes into yellow bag."
+					"title" : "Yellow Bag - Given by Eco Maridi",
+					"description" : "This is hygiene waste - this goes for incineration. Do not wrap diapers, sanitary napkins and panty liners in newspaper or any other wrapper."
 				},
 				6 : {
-					"title" : "Syringe Waste",
-					"description" : "This is the white box with the lid."
+					"title" : "Puncture Proof Can - Given by Eco Maridi",
+					"description" : "This is the white box with the lid, for sharp maerials like needles, scalpels etc."
 				},
 				7 : {
 					"title" : "Glass Bottles",
-					"description" : "Leave outside your door for pickup"
+					"description" : "Collect and leave outside your door for pickup. Empty glass bottles and jars."
 				},
 				8 : {
 					"title" : "Shredder",
 					"description" : "Your gardener needs to take it to the shredder near clubhouse."
-				}
+				},
+        9 : {
+          "title" : "Blue Bag - Given by Eco Maridi",
+          "description" : "For medical waste like syringes without needles, gloves catheters etc."
+        },
+        10 : {
+          "title" : "E-Waste",
+          "description" : "This goes into the collection box in the clubhouse. No bulbs, tube lights, thermometers, car/scooter batteries."
+        },
+        11 : {
+          "title" : "Newspaper",
+          "description" : "Collect and keep outside your door for collection. Daily newspapers, supplements, pamphlets."
+        }
 			},
 			"classification" : {
-				5 : 6,
+				5 : 10,
 				7 : 4,
-				8 : 2,
+				8 : 4,
 				10 : 6,
 				16 : 5,
 				19 : 6,

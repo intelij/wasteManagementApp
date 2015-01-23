@@ -12,5 +12,5 @@
 
 var data = require ('data');
 
-Alloy.Globals.categories = data.data.categories;
-Alloy.Globals.sites = data.data.sites;
+Alloy.Collections.sites = Alloy.createCollection('site');
+   

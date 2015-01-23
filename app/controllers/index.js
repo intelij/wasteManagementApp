@@ -20,14 +20,6 @@ function showSearchresult() {
 }
 
 showSearchresult();
-/*
- function ComplexsearchWord(e) {
- if (e.source.value) {
-
- } else {
- $.complexTable.height ="50%";
- }
- }*/
 
 function getComplexID(title) {
 	var category;
@@ -49,4 +41,3 @@ function selectComplex(e) {
 
 $.topbar.setTitle("Waste Segregation");
 $.index.open();
-//Alloy.createController('findProductCategory').getView().open();

@@ -1,15 +1,13 @@
 exports.definition = {
   config: {
     'columns': {
-      'name': 'Text',
-    },
+      'site_id' : 'integer'
+     },
     'defaults': {
-      'id': 0,
-      'name': '-'
-    },
+     },
     'adapter': {
       'type': 'sql',
-      'collection_name': 'sites',
+      'collection_name': 'site',
       'idAttribute' : 'id'
     }
   }
