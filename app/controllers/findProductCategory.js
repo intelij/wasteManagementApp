@@ -10,66 +10,65 @@ var complexId = params.id;
 var complexDetail = Alloy.Globals.sites[complexId];
 
 function showSuggestions(data) {
-	var tableData = [];
-	_.each(data, function(element, index, list) {
-		var resultRow = Ti.UI.createTableViewRow({
-			title : element.title,
-			color : "black",
-			description : element,
-			backgroundColor : "white",
-			height : 60,
-			borderColor : '#87CEFA',
-			borderWidth : 1,
-			borderRadius : 6,
-		});
-		tableData.push(resultRow);
-	});
+  var tableData = [];
+  _.each(data, function(element, index, list) {
+    var resultRow = Ti.UI.createTableViewRow({
+      title : element.title,
+      color : "black",
+      description : element,
+      backgroundColor : "white",
+      height : 60,
+      borderColor : '#87CEFA',
+      borderWidth : 1,
+      borderRadius : 6,
+    });
+    tableData.push(resultRow);
+  });
 
-	if (tableData.length > 0) {
-		$.resultsTable.data = tableData;
-		var rowCount = $.resultsTable.getSections()[0].rowCount;
-		var rowHeight = $.resultsTable.rowHeight;
-		$.resultsTable.height = (rowCount * rowHeight);
-	} else {
-		$.resultsTable.height = 0;
-	}
+  if (tableData.length > 0) {
+    $.resultsTable.data = tableData;
+    var rowCount = $.resultsTable.getSections()[0].rowCount;
+    var rowHeight = $.resultsTable.rowHeight;
+    $.resultsTable.height = (rowCount * rowHeight);
+  } else {
+    $.resultsTable.height = 0;
+  }
 }
 
 function getCategoryId(title) {
-	var category;
-	Object.keys(data).forEach(function(k) {
-		if (data[k].title == title) {
-			category = k;
-		}
-	});
-	return category;
+  var category;
+  Object.keys(data).forEach(function(k) {
+    if (data[k].title == title) {
+      category = k;
+    }
+  });
+  return category;
 }
 
 function selectWord(e) {
 
-	var categoryID = getCategoryId(e.rowData.title);
-	var typeId = complexDetail.classification[categoryID];
-	var typeTitle = complexDetail.types[typeId].title;
-	var typeDescription = complexDetail.types[typeId].description;
-	Alloy.createController('/categories', {
-		data : e.rowData,
-		title : typeTitle,
-		description : typeDescription
-	}).getView().open();
+  var categoryID = getCategoryId(e.rowData.title);
+  var typeId = complexDetail.classification[categoryID];
+  var typeTitle = complexDetail.types[typeId].title;
+  var typeDescription = complexDetail.types[typeId].description;
+  Alloy.createController('/categories', {
+    data : e.rowData,
+    title : typeTitle,
+    description : typeDescription
+  }).getView().open();
 }
 
 function searchWord(e) {
-	if (e.source.value) {
-		var searchResult = auto.search(e.source.value);
-		showSuggestions(searchResult);
-	} else {
-		$.resultsTable.height = 0;
-	}
+  if (e.source.value) {
+    var searchResult = auto.search(e.source.value);
+    showSuggestions(searchResult);
+  } else {
+    $.resultsTable.height = 0;
+  }
 }
 
 $.topbar.leftNav.addEventListener('click', function(e) {
-	$.index.close();
+  $.index.close();
 });
 $.topbar.left.image = '/common/arrow-left.png';
 $.topbar.setTitle(params.data);
-
