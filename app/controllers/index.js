@@ -26,8 +26,6 @@ function showComplexes() {
 showComplexes();
 
 $.topbar.setTitle("Waste Segregation");
-//$.index.open();
-
 var site_id = Ti.App.Properties.getInt('site_id', 0);
 
 if (site_id == 0) {
