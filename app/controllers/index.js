@@ -1,5 +1,20 @@
 var data = Alloy.Globals.sites;
 
+var site_id = Ti.App.Properties.getInt('site_id',0);
+
+if (site_id == 0) {
+  console.log('wasteApp', 'Site not found' + site_id);
+  showComplexes();
+  $.topbar.setTitle("Waste Segregation");
+  $.index.open();
+} else {
+  console.log('wasteApp', 'Site is ' + site_id);
+  Alloy.createController('/findProductCategory', {
+    data : data[site_id].name,
+    id : site_id
+  }).getView().open();
+}
+
 function showComplexes() {
   var tableData = [];
   var keys = Object.keys(data);
@@ -23,22 +38,6 @@ function showComplexes() {
   $.complexTable.data = tableData;
 }
 
-showComplexes();
-
-$.topbar.setTitle("Waste Segregation");
-
-var site_id = Ti.App.Properties.getInt('site_id',0);
-
-if (site_id == 0) {
-  console.log('wasteApp', 'Site not found' + site_id);
-  $.index.open();
-} else {
-  Alloy.createController('/findProductCategory', {
-    data : data[site_id].name,
-    id : site_id
-  }).getView().open();
-}
-
 function selectComplex(e) {
   var complexID = e.rowData.id;
 	console.log('complex id::'+complexID);
@@ -49,5 +48,4 @@ function selectComplex(e) {
   }).getView().open();
 }
 
-$.topbar.setTitle("Waste Segregation");
-$.index.open();
+

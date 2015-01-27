@@ -2,7 +2,7 @@
 	<Window class="container" navBarHidden="true"  statusBarStyle="">
 		<Require id="topbar" src="common/navbar"></Require>
 		<Label id="complexLabel"></Label>
-		<TableView id="complexTable"  >
+		<TableView id="complexTable" onClick="selectComplex" >
 			<SearchBar id="complexSearchbar" hintText="Type to search"/>
 		</TableView> 
 	</Window>
