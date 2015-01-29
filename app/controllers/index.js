@@ -1,5 +1,5 @@
 var data = Alloy.Globals.sites;
-
+var tableData = [];
 var site_id = Ti.App.Properties.getInt('site_id', 0);
 
 if (site_id == 0) {
@@ -16,7 +16,6 @@ if (site_id == 0) {
 }
 
 function showComplexes() {
-  var tableData = [];
   var keys = Object.keys(data);
   for (var i = 0; i < keys.length; i++) {
     var id = keys[i];
@@ -26,17 +25,19 @@ function showComplexes() {
       id : id,
       color : "black",
       description : element,
-      backgroundColor : "white",
-      height : 60,
-      borderColor : '#87CEFA',
-      borderWidth : 2,
-      borderRadius : 6,
+      backgroundColor : "#cccccc",
+      height : 50,
       textAlign : "center",
-      rightImage :'/common/keyboard-arrow-right.png'
+      rightImage : '/common/keyboard-arrow-right.png',
     });
+    if (i % 2 == 0) {
+      resultRow.backgroundColor = "#cccccc";
+    } else {
+      resultRow.backgroundColor = "#e0e0e0";
+    }
     tableData.push(resultRow);
+    $.complexTable.data = tableData;
   }
-  $.complexTable.data = tableData;
 }
 
 function selectComplex(e) {

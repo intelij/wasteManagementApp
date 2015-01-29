@@ -1,29 +1,32 @@
 var params = arguments[0] || {};
 var autocomplete = require('autocomplete');
 var synonyms = require('data').data.synonyms;
-
 var data = Alloy.Globals.categories;
-
 var auto = new autocomplete.autocomplete(data, synonyms);
-
 var complexId = params.id;
 var complexDetail = Alloy.Globals.sites[complexId];
 
 function showSuggestions(data) {
   var tableData = [];
-  _.each(data, function(element, index, list) {
+  var keys = Object.keys(data);
+  for (var i = 0; i < keys.length; i++) {
+    var id = keys[i];
+    var element = data[id];
     var resultRow = Ti.UI.createTableViewRow({
       title : element.title,
       color : "black",
       description : element,
-      backgroundColor : "white",
       height : 60,
-      borderColor : '#87CEFA',
-      borderWidth : 1,
-      borderRadius : 6,
+      textAlign : "center",
+      rightImage : '/common/keyboard-arrow-right.png',
     });
+    if (i % 2 == 0) {
+      resultRow.backgroundColor = "#cccccc";
+    } else {
+      resultRow.backgroundColor = "#e0e0e0";
+    }
     tableData.push(resultRow);
-  });
+  }
 
   if (tableData.length > 0) {
     $.resultsTable.data = tableData;

@@ -3,7 +3,7 @@
 		<Require id="topbar" src="common/navbar"></Require>
 		<Label id="complexLabel"></Label>
 		<TableView id="complexTable" onClick="selectComplex" >
-			<SearchBar id="complexSearchbar" hintText="Type to search"/>
+			<SearchBar id="complexSearchbar" hintText="Type to search" />
 		</TableView>
 	</Window>
 </Alloy>

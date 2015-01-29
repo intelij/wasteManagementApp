@@ -6,19 +6,16 @@
 	text:"Where do you live?",
 	color:'black',
 	top:20,
-	left:30
+	left:20
 }
 "#complexTable": {
 	top: 10,
-	bottom: 10,
-	width: "90%",
+	width: "92%",
 	backgroundColor: "transparent",
 	visible:true,
-	rowHeight: 60,
-	separatorColor: "white"
+	separatorColor: "white",
 },
 '#complexSearchbar': {
-	backgroundColor:'#87CEFA',
-	hintText:'Enter Text'
+	// backgroundColor:'#87CEFA',
 }
 
