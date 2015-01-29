@@ -52,7 +52,15 @@ module.exports = function(win, view) {
         });
 
     });
+    console.log('Temp directory = ' + Ti.Filesystem.tempDirectory);
+    var outputFile = Ti.Filesystem.getFile(Ti.Filesystem.tempDirectory, 'results.json');
+    outputFile.createFile();
 
+    mocha.setup({ 
+      reporter: 'ti-spec-studio',    // the reporter to use with your tests
+      outputFile: outputFile, // write results to the given Ti.Filesystem.File file
+    //  quiet: true             // if true, suppress all console logging
+    });
     // run the tests
     mocha.run();
 };
