@@ -1,3 +1,5 @@
+require ('ti-mocha');
+
 var data = Alloy.Globals.sites;
 var tableData = [];
 var site_id = Ti.App.Properties.getInt('site_id', 0);
@@ -6,6 +8,10 @@ if (site_id == 0) {
   console.log('wasteApp', 'Site not found' + site_id);
   showComplexes();
   $.topbar.setTitle("Waste Segregation");
+
+  $.index.addEventListener('open', function() {
+    require('app_test')($, $.index);
+  });
   $.index.open();
 } else {
   console.log('wasteApp', 'Site is ' + site_id);
