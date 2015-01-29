@@ -9,9 +9,9 @@ if (site_id == 0) {
   showComplexes();
   $.topbar.setTitle("Waste Segregation");
 
-  $.index.addEventListener('open', function() {
-    require('app_test')($, $.index);
-  });
+ // $.index.addEventListener('open', function() {
+ //    require('app_test')($, $.index);
+ // });
   $.index.open();
 } else {
   console.log('wasteApp', 'Site is ' + site_id);
