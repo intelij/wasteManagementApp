@@ -4,11 +4,11 @@ module.exports = function(win, view) {
 
     describe('app.js', function() {
         console.log('In describe app.js');
-        describe('#myWindow', function() {
+        describe('#index', function() {
 
             it('exists', function() {
                 should.exist(win);
-                win.id.should.equal('myWindow');
+                win.id.should.equal('index');
             });
 
             it('has Ti.UI.Window functions', function() {
@@ -53,12 +53,12 @@ module.exports = function(win, view) {
 
     });
     console.log('Temp directory = ' + Ti.Filesystem.tempDirectory);
-    var outputFile = Ti.Filesystem.getFile(Ti.Filesystem.tempDirectory, 'results.json');
-    outputFile.createFile();
+    // var outputFile = Ti.Filesystem.getFile(Ti.Filesystem.tempDirectory, 'results.json');
+    // outputFile.createFile();
 
     mocha.setup({ 
       reporter: 'ti-spec-studio',    // the reporter to use with your tests
-      outputFile: outputFile, // write results to the given Ti.Filesystem.File file
+     // outputFile: outputFile, // write results to the given Ti.Filesystem.File file
     //  quiet: true             // if true, suppress all console logging
     });
     // run the tests

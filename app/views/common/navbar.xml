@@ -6,5 +6,8 @@
 		<View id="middleText" left="50" right="50">
 			<Label id="midText"/>
 		</View>
+		<View id="settings" height="44" width="44" right="0">
+			<ImageView id="right"/>
+		</View>
 	</View>
 </Alloy>

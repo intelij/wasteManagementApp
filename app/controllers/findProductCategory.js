@@ -73,5 +73,9 @@ function searchWord(e) {
 $.topbar.leftNav.addEventListener('click', function(e) {
   $.index.close();
 });
+$.topbar.settings.addEventListener('click', function(e) {
+	Alloy.createController('index').getView().open();
+});
 $.topbar.left.image = '/common/arrow-left.png';
+$.topbar.right.image='/common/settings.png';
 $.topbar.setTitle(params.data);

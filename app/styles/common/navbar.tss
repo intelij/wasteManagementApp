@@ -20,4 +20,8 @@
 	 font:{
 	 	fontSize: 20,
 	 }
+},
+"#right":{
+	height: 32,
+	width: 32
 }

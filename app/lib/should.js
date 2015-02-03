@@ -435,7 +435,7 @@ Assertion.prototype = {
    * @memberOf Assertion
    * @category assertion
    */
-  get not() {
+  get: function() {
     this.negate = !this.negate;
     return this.proxied();
   },
@@ -446,7 +446,7 @@ Assertion.prototype = {
    * @memberOf Assertion
    * @category assertion
    */
-  get any() {
+  get:function any() {
     this.anyOne = true;
     return this.proxied();
   },

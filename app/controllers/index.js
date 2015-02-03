@@ -1,4 +1,4 @@
-require ('ti-mocha');
+require('ti-mocha');
 
 var data = Alloy.Globals.sites;
 var tableData = [];
@@ -6,14 +6,21 @@ var site_id = Ti.App.Properties.getInt('site_id', 0);
 
 if (site_id == 0) {
   console.log('wasteApp', 'Site not found' + site_id);
-  showComplexes();
-  $.topbar.setTitle("Waste Segregation");
-
- // $.index.addEventListener('open', function() {
- //    require('app_test')($, $.index);
- // });
+  //showComplexes();
+  $.topbar.settings.hide();
+  $.index.addEventListener('open', function() {
+    require('app_test')($.index);
+  });
   $.index.open();
 } else {
+  $.topbar.right.image = '/common/arrow-right.png';
+  $.topbar.setTitle("Waste Segregation");
+  $.topbar.settings.addEventListener('click', function(e) {
+    Alloy.createController('/findProductCategory', {
+      data : data[site_id].name,
+      id : site_id
+    }).getView().open();
+  });
   console.log('wasteApp', 'Site is ' + site_id);
   Alloy.createController('/findProductCategory', {
     data : data[site_id].name,
@@ -21,6 +28,7 @@ if (site_id == 0) {
   }).getView().open();
 }
 
+showComplexes();
 function showComplexes() {
   var keys = Object.keys(data);
   for (var i = 0; i < keys.length; i++) {
