@@ -65,6 +65,7 @@ function searchWord(e) {
   if (e.source.value) {
     var searchResult = auto.search(e.source.value);
     showSuggestions(searchResult);
+    console.log('result:::'+JSON.stringify(searchResult));
   } else {
     $.resultsTable.height = 0;
   }
@@ -74,8 +75,8 @@ $.topbar.leftNav.addEventListener('click', function(e) {
   $.index.close();
 });
 $.topbar.settings.addEventListener('click', function(e) {
-	Alloy.createController('index').getView().open();
+  Alloy.createController('index').getView().open();
 });
 $.topbar.left.image = '/common/arrow-left.png';
-$.topbar.right.image='/common/settings.png';
+$.topbar.right.image = '/common/settings.png';
 $.topbar.setTitle(params.data);

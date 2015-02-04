@@ -6,11 +6,10 @@ var site_id = Ti.App.Properties.getInt('site_id', 0);
 
 if (site_id == 0) {
   console.log('wasteApp', 'Site not found' + site_id);
-  //showComplexes();
   $.topbar.settings.hide();
-  $.index.addEventListener('open', function() {
-    require('app_test')($.index);
-  });
+  //$.index.addEventListener('open', function() {
+   // require('app_test')($.index);
+  //});
   $.index.open();
 } else {
   $.topbar.right.image = '/common/arrow-right.png';
@@ -27,7 +26,6 @@ if (site_id == 0) {
     id : site_id
   }).getView().open();
 }
-
 showComplexes();
 function showComplexes() {
   var keys = Object.keys(data);
