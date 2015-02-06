@@ -49,15 +49,22 @@ function getCategoryId(title) {
 }
 
 function selectWord(e) {
-
   var categoryID = getCategoryId(e.rowData.title);
   var typeId = complexDetail.classification[categoryID];
   var typeTitle = complexDetail.types[typeId].title;
-  var typeDescription = complexDetail.types[typeId].description;
+  var typePickup = complexDetail.types[typeId].pickup || 'None';
+  var typeDestination = complexDetail.types[typeId].destination;
+  var typeMethod = complexDetail.types[typeId].method ;
+  var typeInclusions = complexDetail.types[typeId].inclusions;
+  var typeExclusions = complexDetail.types[typeId].exclusions ;
   Alloy.createController('/categories', {
     data : e.rowData,
     title : typeTitle,
-    description : typeDescription
+    pickup : typePickup,
+    destination : typeDestination,
+    method : typeMethod,
+    inclusions : typeInclusions,
+    exclusions : typeExclusions
   }).getView().open();
 }
 
@@ -65,7 +72,6 @@ function searchWord(e) {
   if (e.source.value) {
     var searchResult = auto.search(e.source.value);
     showSuggestions(searchResult);
-    console.log('result:::'+JSON.stringify(searchResult));
   } else {
     $.resultsTable.height = 0;
   }

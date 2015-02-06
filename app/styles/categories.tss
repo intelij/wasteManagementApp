@@ -4,21 +4,128 @@
 },
 "#categoriesTitle": {
   layout: "vertical",
-	backgroundColor: "#ffff",
+	backgroundColor: "#ffff"
+},
+"#selectedtypelabel":{
+	 top:5,
+  height:Ti.UI.SIZE,
+    width:'100%',
+    left:15,
+    right:5,
+    color:'black',
+    font:  {
+    fontSize: 20,
+    fontFamily: "burnstown_dam"
+}
 },
 "#categoryLabel": {
-    top:30,
-    height:'10%',
+    top:5,
+    height:Ti.UI.SIZE,
+    width:'100%',
+    left:10,
+    font:  {
+    fontSize: 18,
+    fontFamily: "burnstown_dam"
+},
+    color:'black'
+},
+"#pickup": {
+	 top:5,
+    height:Ti.UI.SIZE,
     width:'100%',
     left:10,
     color:'black'
 },
-"#descriptionLabel": {
-	 top:20,
-    height:'10%',
+"#destination":{
+	 top:5,
+   height:Ti.UI.SIZE,
     width:'100%',
-    left:5,
+    left:10,
     color:'black'
+},
+"#method":{
+	 top:5,
+   height:Ti.UI.SIZE,
+    width:'100%',
+    left:10,
+    color:'black'
+},
+"#inclusions":{
+	top:0,
+	left:10,
+	height:Ti.UI.SIZE,
+    width:'100%',
+    color:'#78ab78'
+},
+"#exclusions":{
+	top:0,
+	left:10,
+    height:Ti.UI.SIZE,
+    width:'100%',
+    color:'red'
+},
+"#categoryview":{
+	top:0,
+	height:Ti.UI.SIZE,
+	backgroundColor:'#cccccc'
+},
+"#scrollview":{
+	top:2,
+	left:0,
+	backgroundColor:"white",
+	width:"100%",
+	height:"100%",
+	layout: "vertical",
+},
+"#categoryView":{
+	top:2,
+	height:Ti.UI.SIZE,
+	left:10,
+	right:10,
+	backgroundColor:'#e0e0e0',
+	layout: "vertical",
+},
+"#clockView":{
+	top:2,
+	height:Ti.UI.SIZE,
+	left:10,
+	right:10,
+	backgroundColor:'#e0e0e0',
+	layout: "horizontal",
+},
+"#destinationView":{
+	top:2,
+	height:Ti.UI.SIZE,
+	left:10,
+	right:10,
+	backgroundColor:'#e0e0e0',
+	layout: "vertical",
+},
+"#methodView":{
+	top:2,
+	height:Ti.UI.SIZE,
+	left:10,
+	right:10,
+	backgroundColor:'#e0e0e0',
+	layout: "vertical",
+},
+
+"#inclusionsView":{
+	top:2,
+	height:Ti.UI.SIZE,
+	left:10,
+	right:10,
+	backgroundColor:'#e0e0e0',
+	layout: "vertical",
+}
+"#exclusionsView":{
+	top:2,
+	height:Ti.UI.SIZE,
+	left:10,
+	right:10,
+	backgroundColor:'#e0e0e0',
+	layout: "vertical",
+	bottom:2
 }
 /*
 "#searchbar": {

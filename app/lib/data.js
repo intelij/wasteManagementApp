@@ -1525,7 +1525,7 @@ var data = {
           "destination" : "Smarthanam - For Recycling",
           "method":"Ensure that all discarded items are free of food remains. If they cannot be cleaned, put in the General Waste.",
           "inclusions" : "Regular/Glossy/Plastic Coated Paper, Advert Pamphlets, Receipts/Bills/Statements, Children’s Craft Paper, Chart Paper, Paper Cups and Plates, Pizza/Cereal Boxes/Cartons, Packing Cardboard, Magazines/Books",
-          "exclusions" : "No soiled paper/tissue."
+          "exclusions" : "soiled paper/tissue."
 
 				},
 				3 : {
@@ -1563,7 +1563,7 @@ var data = {
           "pickup" : "Monday",
           "destination" : "Smarthanam - Recycling",
           "inclusions" : "Empty glass bottles and jars.",
-          "exclusions" : "No broken bottles"
+          "exclusions" : "broken bottles"
 				},
 				8 : {
 					"title" : "Garden Waste",
@@ -1571,7 +1571,7 @@ var data = {
           "destination" : "Shredder - Inhouse Composting",
           "method": "Your gardener needs to take it to the shredder near clubhouse.",
           "inclusions" : "leaves,stems,grass",
-          "exclusions" : "No stems thicker than 1-2 inches."
+          "exclusions" : "stems thicker than 1-2 inches."
 				},
         9 : {
           "title" : "Blue Bag - Given by Eco Maridi",
@@ -1579,14 +1579,14 @@ var data = {
           "destination" : "Eco Maridi",
           "method": "For medical waste like syringes without needles, gloves catheters etc.",
           "inclusions" : "Used plastic material, Syringes without needles, gloves, tubes, catheters",
-          "exclusions" : "No needles or other sharp objects."
+          "exclusions" : "needles or other sharp objects."
         },
         10 : {
           "title" : "E-Waste",
           "pickup" : "None",
           "destination" : "Smarthanam - Recycling",
           "inclusions" : "Mercury and Alkaline batteries, cells, wires, switch boxes, UPS, CD's, laptop, all chargers, hotplate, iron, microwave",
-          "exclusions" : "No bulbs, tube lights, thermometers, car/scooter batteries."
+          "exclusions" : "bulbs, tube lights, thermometers, car/scooter batteries."
         },
         11 : {
           "title" : "Newspaper",

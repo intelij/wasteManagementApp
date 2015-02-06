@@ -1,7 +1,30 @@
 <Alloy>
 	<Window class="container" navBarHidden="true">
 		<Require id="topbar" src="common/navbar"></Require>
-		<Label id="categoryLabel"></Label>
-		<Label id="descriptionLabel"></Label>
+		<View id="categoryview">
+			<Label id="selectedtypelabel"></Label>
+		</View>
+		<ScrollView  id="scrollview">
+			<View id="categoryView">
+				<Label id="categoryLabel"></Label>
+			</View>
+			<View id="clockView">
+				<ImageView id="clockimage"></ImageView>
+				<Label id="pickup"></Label>
+			</View>
+			<View id="destinationView">
+				<Label id="destination"></Label>
+			</View>
+			<View id="methodView">
+				<Label id="method"></Label>
+			</View>
+			<View id="inclusionsView">
+				<Label id="inclusions"></Label>
+			</View>
+			<View id="exclusionsView">
+				<Label id="exclusions"></Label>
+			</View>
+
+		</ScrollView>
 	</Window>
 </Alloy>
