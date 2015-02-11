@@ -2,12 +2,14 @@
 ".container": {
   width:"100%",
   height:44,
-  backgroundColor:"#172E68",
+  backgroundColor:"#ffffb2",
   top:0,
   left:0,
+  borderColor:"#4bbd00"
   
 },
 "#left": {
+	//left:5,
 	height: 32,
 	width: 32
 },
@@ -15,13 +17,14 @@
 	// /borderColor: "#ffffff"
 },
 "#midText": {
-	 color:"white",
+	 color:"black",
 	 textAlign:"center",
 	 font:{
 	 	fontSize: 20,
 	 }
 },
 "#right":{
+	//right:5,
 	height: 32,
 	width: 32
 }

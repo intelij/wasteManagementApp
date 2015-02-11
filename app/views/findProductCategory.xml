@@ -1,6 +1,7 @@
 <Alloy>
 	<Window id="index" class="container" navBarHidden="true">
-		<Require id="topbar" src="common/navbar"/>
+		<Require id="topbar" src="common/topbar"/>
+		<Require id="navbar" src="common/navbar"/>
 		<SearchBar id="searchbar" onChange="searchWord" color="black" width="92%" height="50" top="10" hintText="Search the waste product"/>
 		<TableView id="resultsTable" onClick="selectWord" searchAsChild="false"></TableView>
 	</Window>

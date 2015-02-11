@@ -1,22 +1,32 @@
 <Alloy>
 	<Window class="container" navBarHidden="true">
-		<Require id="topbar" src="common/navbar"></Require>
-		<View id="categoryview">
+		<Require id="topbar" src="common/topbar"></Require>
+		<Require id="navbar" src="common/navbar"></Require>
+		<View id="selectedtypeview">
 			<Label id="selectedtypelabel"></Label>
 		</View>
 		<ScrollView  id="scrollview">
 			<View id="categoryView">
 				<Label id="categoryLabel"></Label>
 			</View>
+			<Label id="popupLabel"></Label>
 			<View id="clockView">
-				<ImageView id="clockimage"></ImageView>
 				<Label id="pickup"></Label>
+				<ImageView id="clockimage"></ImageView>
 			</View>
 			<View id="destinationView">
-				<Label id="destination"></Label>
+				<View id="destinationimageView">
+					<ImageView id="destinationimage"></ImageView>
+					<Label id="destination">Destination: </Label>
+				</View>
+				<Label id="destinationvalue"></Label>
 			</View>
 			<View id="methodView">
-				<Label id="method"></Label>
+				<View id="methodimageView">
+					<ImageView id="methodimage"></ImageView>
+					<Label id="method">Method: </Label>
+				</View>
+				<Label id="methodvalue"></Label>
 			</View>
 			<View id="inclusionsView">
 				<Label id="inclusions"></Label>

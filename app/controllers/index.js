@@ -2,15 +2,16 @@
 var data = Alloy.Globals.sites;
 var tableData = [];
 var site_id = Ti.App.Properties.getInt('site_id', 0);
-
 if (site_id == 0) {
   console.log('wasteApp', 'Site not found' + site_id);
-  $.topbar.settings.hide();
+  $.navbar.settings.hide();
   $.index.open();
 } else {
-  $.topbar.right.image = '/common/arrow-right.png';
-  $.topbar.setTitle("Waste Segregation");
-  $.topbar.settings.addEventListener('click', function(e) {
+	$.topbar.left.image = '/common/Small_logo.png';
+	$.topbar.right.image = '/common/logout_button.png';
+  $.navbar.right.image = '/common/arrow-right.png';
+  $.navbar.setTitle("Waste Segregation");
+  $.navbar.settings.addEventListener('click', function(e) {
     Alloy.createController('/findProductCategory', {
       data : data[site_id].name,
       id : site_id

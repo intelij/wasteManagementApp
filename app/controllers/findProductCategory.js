@@ -5,7 +5,6 @@ var data = Alloy.Globals.categories;
 var auto = new autocomplete.autocomplete(data, synonyms);
 var complexId = params.id;
 var complexDetail = Alloy.Globals.sites[complexId];
-
 function showSuggestions(data) {
   var tableData = [];
   var keys = Object.keys(data);
@@ -77,12 +76,14 @@ function searchWord(e) {
   }
 }
 
-$.topbar.leftNav.addEventListener('click', function(e) {
+$.navbar.leftNav.addEventListener('click', function(e) {
   $.index.close();
 });
-$.topbar.settings.addEventListener('click', function(e) {
+$.topbar.logout.addEventListener('click', function(e) {
   Alloy.createController('index').getView().open();
 });
-$.topbar.left.image = '/common/arrow-left.png';
-$.topbar.right.image = '/common/settings.png';
-$.topbar.setTitle(params.data);
+$.navbar.left.image = '/common/back_button.png';
+//$.navbar.right.image = '/common/settings.png';
+$.topbar.left.image = '/common/Small_logo.png';
+	$.topbar.right.image = '/common/logout_button.png';
+$.navbar.setTitle(params.data);

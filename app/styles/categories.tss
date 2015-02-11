@@ -2,73 +2,142 @@
 	layout: "vertical",
 	backgroundColor: "#ffffff"
 },
-"#categoriesTitle": {
-  layout: "vertical",
-	backgroundColor: "#ffff"
+"#selectedtypeview":{
+	top:0,
+	height:Ti.UI.SIZE,
+	backgroundColor:'#eaeaea'
 },
 "#selectedtypelabel":{
 	 top:5,
   height:Ti.UI.SIZE,
     width:'100%',
-    left:15,
+    left:10,
     right:5,
+    bottom:5,
     color:'black',
+    font:  {
+    fontSize: 22,
+    fontFamily: "burnstown_dam"
+},
+},
+"#categoryLabel": {
+    top:12,
+     bottom:5,
+    height:Ti.UI.SIZE,
+    width:'100%',
+    left:10,
     font:  {
     fontSize: 20,
     fontFamily: "burnstown_dam"
-}
-},
-"#categoryLabel": {
-    top:5,
-    height:Ti.UI.SIZE,
-    width:'100%',
-    left:10,
-    font:  {
-    fontSize: 18,
-    fontFamily: "burnstown_dam"
 },
     color:'black'
+},
+"#clockimage":{
+	 top:14,
+    height:30,
+    width:30,
+    left:10,
 },
 "#pickup": {
-	 top:5,
+	 top:18,
     height:Ti.UI.SIZE,
-    width:'100%',
-    left:10,
+     width:'90%',
+    left:45,
+    right:10,
     color:'black'
+},
+"#destinationimage":{
+	top:6,
+    height:30,
+    width:30,
+    left:10,
+    image:"/common/destination_icon.png"
+}
+"#destinationimageView":{
+	top:0,
+	height:Ti.UI.SIZE,
+	left:0,
+	backgroundColor:'#eaeaea',
+	layout: "horizontal",
 },
 "#destination":{
-	 top:5,
+	 top:8,
    height:Ti.UI.SIZE,
-    width:'100%',
+    width:'80%',
+    left:5,
+    color:'black',
+     font:  {
+    fontSize: 20,
+    fontFamily: "burnstown_dam"
+    }
+},
+"#destinationvalue":{
+	 top:1,
+   height:Ti.UI.SIZE,
+    width:'90%',
+    left:25,
+     right:10,
+    color:'black',
+    bottom:5
+},
+"#methodimage":{
+	top:6,
+    height:30,
+    width:30,
     left:10,
-    color:'black'
+    image:"/common/method_icon.png"
+}
+"#methodimageView":{
+	top:0,
+	height:Ti.UI.SIZE,
+	left:0,
+	backgroundColor:'#eaeaea',
+	layout: "horizontal",
 },
 "#method":{
-	 top:5,
+	 top:8,
    height:Ti.UI.SIZE,
-    width:'100%',
-    left:10,
-    color:'black'
+    width:'80%',
+    left:5,
+    color:'black',
+     font:  {
+    fontSize: 20,
+    fontFamily: "burnstown_dam"
+    }
+    
+},
+"#methodvalue":{
+	 top:1,
+   height:Ti.UI.SIZE,
+    width:'90%',
+    left:25,
+    right:10,
+    color:'black',
+    bottom:5
 },
 "#inclusions":{
 	top:0,
 	left:10,
 	height:Ti.UI.SIZE,
     width:'100%',
-    color:'#78ab78'
+    color:'black',
+    font:  {
+    fontSize: 20,
+    fontFamily: "burnstown_dam"
+    }
 },
 "#exclusions":{
 	top:0,
 	left:10,
     height:Ti.UI.SIZE,
     width:'100%',
-    color:'red'
+    color:'black',
+    font:  {
+    fontSize: 20,
+    fontFamily: "burnstown_dam"
+    }
 },
-"#categoryview":{
-	top:0,
-	height:Ti.UI.SIZE,
-	backgroundColor:'#cccccc'
-},
+
 "#scrollview":{
 	top:2,
 	left:0,
@@ -79,35 +148,39 @@
 },
 "#categoryView":{
 	top:2,
-	height:Ti.UI.SIZE,
+	height:"10%",
 	left:10,
 	right:10,
-	backgroundColor:'#e0e0e0',
+	backgroundColor:'#eaeaea',
 	layout: "vertical",
+	borderRadius:10
 },
 "#clockView":{
 	top:2,
-	height:Ti.UI.SIZE,
+	height:"11%",
 	left:10,
 	right:10,
-	backgroundColor:'#e0e0e0',
+	backgroundColor:'#eaeaea',
 	layout: "horizontal",
+	borderRadius:10
 },
 "#destinationView":{
 	top:2,
-	height:Ti.UI.SIZE,
+	height:"12%",
 	left:10,
 	right:10,
-	backgroundColor:'#e0e0e0',
+	backgroundColor:'#eaeaea',
 	layout: "vertical",
+	borderRadius:10
 },
 "#methodView":{
 	top:2,
 	height:Ti.UI.SIZE,
 	left:10,
 	right:10,
-	backgroundColor:'#e0e0e0',
+	backgroundColor:'#eaeaea',
 	layout: "vertical",
+	borderRadius:10
 },
 
 "#inclusionsView":{
@@ -115,20 +188,29 @@
 	height:Ti.UI.SIZE,
 	left:10,
 	right:10,
-	backgroundColor:'#e0e0e0',
+	backgroundColor:' #e6f8da',
 	layout: "vertical",
-}
+	borderRadius:10
+},
 "#exclusionsView":{
 	top:2,
 	height:Ti.UI.SIZE,
 	left:10,
 	right:10,
-	backgroundColor:'#e0e0e0',
+	backgroundColor:'#f8dada',
 	layout: "vertical",
-	bottom:2
+	bottom:2,
+	borderRadius:10
+},
+"#popupLabel":{
+	top:-20,
+	zIndex:10,
+	backgroundColor: "#63b0a4",
+	text:"Pickup",
+	visible:false,
+	color:'black',
+	left:20,
+	height:Ti.UI.SIZE,
+	//borderRadius:10
 }
-/*
-"#searchbar": {
-	search :Titanium.UI.Android.SearchView
-}*/
 
