@@ -1,0 +1,10 @@
+<Alloy>
+	<View class="container">
+		<View id="gotwaste" height="44" width="Ti.UI.SIZE" left="0" >
+			<ImageView id="left"/>
+		</View>
+		<View id="logout" height="44" width="Ti.UI.SIZE" right="0">
+			<ImageView id="right"/>
+		</View>
+	</View>
+</Alloy>

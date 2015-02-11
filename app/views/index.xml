@@ -1,6 +1,7 @@
 <Alloy>
 	<Window class="container" navBarHidden="true"  statusBarStyle="">
-		<Require id="topbar" src="common/navbar"></Require>
+		<Require id="topbar" src="common/topbar"></Require>
+		<Require id="navbar" src="common/navbar"></Require>
 		<Label id="complexLabel"></Label>
 		<TableView id="complexTable" onClick="selectComplex" >
 			<SearchBar id="complexSearchbar" hintText="Type to search" />

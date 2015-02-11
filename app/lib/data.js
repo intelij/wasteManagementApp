@@ -1847,35 +1847,97 @@ var data = {
 		},
 		2 : {
 			"name" : "Palm Meadows",
-			"types" : {
+			"types" : { 
 				1 : {
 					"title" : "General Waste",
-					"description" : "Everything that has no other place."
+          "pickup" : "Monday, Thursday, Saturday",
+          "destination" : "BBMP",
+          "method": "Use a regular plastic/garbage bag; tie tightly and place outside your home.",
+          "inclusions" : "Dirt, Egg Shells, Coconut Shells, Sugarcane, Corn cobs, Mango Kernel, Nut shells, Soiled Paper, Large/Hard Bones"
 				},
 				2 : {
-					"title" : "Recycle Bag 2",
-					"description" : "Plastics/Metals etc."
+					"title" : "White Bag - Paper/Cardboard",
+          "pickup" : "Tuesday, Saturday",
+          "destination" : "Smarthanam - For Recycling",
+          "method":"Ensure that all discarded items are free of food remains. If they cannot be cleaned, put in the General Waste.",
+          "inclusions" : "Regular/Glossy/Plastic Coated Paper, Advert Pamphlets, Receipts/Bills/Statements, Children’s Craft Paper, Chart Paper, Paper Cups and Plates, Pizza/Cereal Boxes/Cartons, Packing Cardboard, Magazines/Books",
+          "exclusions" : "soiled paper/tissue."
+
 				},
 				3 : {
-					"title" : "Organic Waste",
-					"description" : "Kitchen waste for composting."
+					"title" : "Kitchen Waste",
+          "pickup" : "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday",
+          "destination" : "Inhouse Bio-Digestor - BioGas and Manure",
+          "method":"Use any container with lid without any paper or plastic liner. Make sure big items like melon rind/pineapple heads are cut into 1-2 inch pieces.",
+          "inclusions" : "Vegetable and Fruit Peels/Discards, Leftover Food and Readymade Snacks, Meat/Small and Soft Bones, Grains/Pulses/Flour/Nuts, Milk/Curd, Cut melon rind/ Cauliflower/Pineapple heads",
+          "exclusions" : "Egg Shells, Coconut Shells, Sugarcane, Corn cobs, Mango Kernel, Nut shells, Soiled Paper, Large/Hard Bones"
 				},
 				4 : {
-					"title" : "Recycle Bag 1",
-					"description" : "Paper/Newspaper etc."
+					"title" : "Light Blue Bag - Plastic/Metal/Tetrapak",
+          "pickup" : "Tuesday, Saturday",
+          "destination" : "Smarthanam - Recycling",
+          "method": "Rinse all containers before discarding.",
+          "inclusions" : "Plastic carry/packing bags, Milk/oil/snack/chips/candy sachet and wrappers, Plastic items like brushes/spoons/toothpaste tubes, All kinds of containers/cans/bottles/lids, Pipes/nuts/bolts/aluminium foil, Tetrapak pouches and cartons, Styrofoam/Thermocol, Empty medicine blisters",
+          "exclusions" : "bulbs, tube lights, thermometers."
 				},
 				5 : {
-					"title" : "Medical Waste",
-					"description" : "Medicines."
+					"title" : "Yellow Bag - Hygiene Waste",
+          "pickup" : "Monday, Wednesday, Friday",
+          "destination" : "Eco Maridi - Incineration",
+          "method": "Put without wrapping. Tie Properly. Put in a bin with lid outside your house.",
+          "inclusions" : "Sanitary Napkins/Panty Liners/ Contraceptives, Diapers, Dressings/Bandages, Cotton Swabs/Cloth with or without blood/nail paint/makeup remover, Hair, Any other contaminated material, All infected and lab waste",
+          "exclusions" : "Sharps like needles/scalpels"
 				},
 				6 : {
-					"title" : "Syringe Waste",
-					"description" : "White box with lid."
+					"title" : "Puncture Proof Can",
+          "pickup" : "Monday, Wednesday, Friday",
+          "destination" : "Eco Maridi",
+          "inclusions" : "sharp materials like needles, scalpels etc."
 				},
 				7 : {
 					"title" : "Glass Bottles",
-					"description" : "Leave outside door."
-				}
+          "pickup" : "Monday",
+          "destination" : "Smarthanam - Recycling",
+          "inclusions" : "Empty glass bottles and jars.",
+          "exclusions" : "broken bottles"
+				},
+				8 : {
+					"title" : "Garden Waste",
+          "pickup" : "None",
+          "destination" : "Shredder - Inhouse Composting",
+          "method": "Your gardener needs to take it to the shredder near clubhouse.",
+          "inclusions" : "leaves,stems,grass",
+          "exclusions" : "stems thicker than 1-2 inches."
+				},
+        9 : {
+          "title" : "Blue Bag - Given by Eco Maridi",
+          "pickup" : "None",
+          "destination" : "Eco Maridi",
+          "method": "For medical waste like syringes without needles, gloves catheters etc.",
+          "inclusions" : "Used plastic material, Syringes without needles, gloves, tubes, catheters",
+          "exclusions" : "needles or other sharp objects."
+        },
+        10 : {
+          "title" : "E-Waste",
+          "pickup" : "None",
+          "destination" : "Smarthanam - Recycling",
+          "inclusions" : "Mercury and Alkaline batteries, cells, wires, switch boxes, UPS, CD's, laptop, all chargers, hotplate, iron, microwave",
+          "exclusions" : "bulbs, tube lights, thermometers, car/scooter batteries."
+        },
+        11 : {
+          "title" : "Newspaper",
+          "pickup" : "Tuesday",
+          "destination" : "Smarthanam - Recycling",
+          "inclusions" : "Daily newspapers, supplements, pamphlets"
+        },
+        12 : {
+          "title" : "Medicines",
+          "pickup" : "Monday, Thursday, Saturday",
+          "destination" : "Every 3 Months",
+          "method": "Used and expired medicines go into the collection box in the clubhouse.",
+          "inclusions" : "All unused and expired medicines",
+          "exclusions" : "syringes, catheters, medical instruments"
+        }
 			},
 			"classification" : {
 				5 : 5,
@@ -2120,19 +2182,98 @@ var data = {
 		},
 		3 : {
 			"name" : "BBMP",
-			"types" : {
+			"types" :{ 
 				1 : {
 					"title" : "General Waste",
-					"description" : "Everything goes here."
+          "pickup" : "Monday, Thursday, Saturday",
+          "destination" : "BBMP",
+          "method": "Use a regular plastic/garbage bag; tie tightly and place outside your home.",
+          "inclusions" : "Dirt, Egg Shells, Coconut Shells, Sugarcane, Corn cobs, Mango Kernel, Nut shells, Soiled Paper, Large/Hard Bones"
 				},
 				2 : {
-					"title" : "Wet Waste",
-					"description" : "This is for kitchen waste."
+					"title" : "White Bag - Paper/Cardboard",
+          "pickup" : "Tuesday, Saturday",
+          "destination" : "Smarthanam - For Recycling",
+          "method":"Ensure that all discarded items are free of food remains. If they cannot be cleaned, put in the General Waste.",
+          "inclusions" : "Regular/Glossy/Plastic Coated Paper, Advert Pamphlets, Receipts/Bills/Statements, Children’s Craft Paper, Chart Paper, Paper Cups and Plates, Pizza/Cereal Boxes/Cartons, Packing Cardboard, Magazines/Books",
+          "exclusions" : "soiled paper/tissue."
+
 				},
 				3 : {
-					"title" : "Dry Waste",
-					"description" : "Paper/Plastics and other recyclables."
+					"title" : "Kitchen Waste",
+          "pickup" : "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday",
+          "destination" : "Inhouse Bio-Digestor - BioGas and Manure",
+          "method":"Use any container with lid without any paper or plastic liner. Make sure big items like melon rind/pineapple heads are cut into 1-2 inch pieces.",
+          "inclusions" : "Vegetable and Fruit Peels/Discards, Leftover Food and Readymade Snacks, Meat/Small and Soft Bones, Grains/Pulses/Flour/Nuts, Milk/Curd, Cut melon rind/ Cauliflower/Pineapple heads",
+          "exclusions" : "Egg Shells, Coconut Shells, Sugarcane, Corn cobs, Mango Kernel, Nut shells, Soiled Paper, Large/Hard Bones"
 				},
+				4 : {
+					"title" : "Light Blue Bag - Plastic/Metal/Tetrapak",
+          "pickup" : "Tuesday, Saturday",
+          "destination" : "Smarthanam - Recycling",
+          "method": "Rinse all containers before discarding.",
+          "inclusions" : "Plastic carry/packing bags, Milk/oil/snack/chips/candy sachet and wrappers, Plastic items like brushes/spoons/toothpaste tubes, All kinds of containers/cans/bottles/lids, Pipes/nuts/bolts/aluminium foil, Tetrapak pouches and cartons, Styrofoam/Thermocol, Empty medicine blisters",
+          "exclusions" : "bulbs, tube lights, thermometers."
+				},
+				5 : {
+					"title" : "Yellow Bag - Hygiene Waste",
+          "pickup" : "Monday, Wednesday, Friday",
+          "destination" : "Eco Maridi - Incineration",
+          "method": "Put without wrapping. Tie Properly. Put in a bin with lid outside your house.",
+          "inclusions" : "Sanitary Napkins/Panty Liners/ Contraceptives, Diapers, Dressings/Bandages, Cotton Swabs/Cloth with or without blood/nail paint/makeup remover, Hair, Any other contaminated material, All infected and lab waste",
+          "exclusions" : "Sharps like needles/scalpels"
+				},
+				6 : {
+					"title" : "Puncture Proof Can",
+          "pickup" : "Monday, Wednesday, Friday",
+          "destination" : "Eco Maridi",
+          "inclusions" : "sharp materials like needles, scalpels etc."
+				},
+				7 : {
+					"title" : "Glass Bottles",
+          "pickup" : "Monday",
+          "destination" : "Smarthanam - Recycling",
+          "inclusions" : "Empty glass bottles and jars.",
+          "exclusions" : "broken bottles"
+				},
+				8 : {
+					"title" : "Garden Waste",
+          "pickup" : "None",
+          "destination" : "Shredder - Inhouse Composting",
+          "method": "Your gardener needs to take it to the shredder near clubhouse.",
+          "inclusions" : "leaves,stems,grass",
+          "exclusions" : "stems thicker than 1-2 inches."
+				},
+        9 : {
+          "title" : "Blue Bag - Given by Eco Maridi",
+          "pickup" : "None",
+          "destination" : "Eco Maridi",
+          "method": "For medical waste like syringes without needles, gloves catheters etc.",
+          "inclusions" : "Used plastic material, Syringes without needles, gloves, tubes, catheters",
+          "exclusions" : "needles or other sharp objects."
+        },
+        10 : {
+          "title" : "E-Waste",
+          "pickup" : "None",
+          "destination" : "Smarthanam - Recycling",
+          "inclusions" : "Mercury and Alkaline batteries, cells, wires, switch boxes, UPS, CD's, laptop, all chargers, hotplate, iron, microwave",
+          "exclusions" : "bulbs, tube lights, thermometers, car/scooter batteries."
+        },
+        11 : {
+          "title" : "Newspaper",
+          "pickup" : "Tuesday",
+          "destination" : "Smarthanam - Recycling",
+          "inclusions" : "Daily newspapers, supplements, pamphlets"
+        },
+        12 : {
+          "title" : "Medicines",
+          "pickup" : "Monday, Thursday, Saturday",
+          "destination" : "Every 3 Months",
+          "method": "Used and expired medicines go into the collection box in the clubhouse.",
+          "inclusions" : "All unused and expired medicines",
+          "exclusions" : "syringes, catheters, medical instruments"
+        }
+
 			},
 			"classification" : {
 				5 : 2,

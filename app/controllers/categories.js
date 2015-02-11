@@ -4,53 +4,82 @@ var tableDataexclusions = [];
 var inclusionsArray = [];
 var exclusionsArray = [];
 
-$.topbar.setTitle("Where it Goes");
+$.navbar.setTitle("Where it Goes");
 $.selectedtypelabel.text = params.data.title;
 $.categoryLabel.text = params.title;
-$.destination.text = "Destination: " + params.destination;
+$.destinationvalue.text = params.destination;
 $.inclusions.text = "Inclusions: ";
-//
-
-$.topbar.left.image = '/common/arrow-left.png';
-$.topbar.right.image = '/common/settings.png';
-$.topbar.leftNav.addEventListener('click', function(e) {
+$.topbar.left.image = '/common/Small_logo.png';
+	$.topbar.right.image = '/common/logout_button.png';
+$.navbar.left.image = '/common/back_button.png';
+//$.navbar.right.image = '/common/settings.png';
+$.navbar.leftNav.addEventListener('click', function(e) {
   $.categories.close();
 });
-$.topbar.settings.addEventListener('click', function(e) {
+$.topbar.logout.addEventListener('click', function(e) {
   Alloy.createController('index').getView().open();
 });
 
 function getInclusions() {
   inclusionsArray = params.inclusions.split(',');
   for (var i = 0; i < inclusionsArray.length; i++) {
-    // Create a Label.
+    	var view=Ti.UI.createView({
+  		backgroundColor:'#e6f8da',
+	layout: "horizontal",
+	height:Ti.UI.SIZE,
+	width:"100%"
+  	});
+  	var image=Ti.UI.createImageView({
+  		 left : 15,
+      top:2,
+      height:20,
+      width:20,
+      image:"/common/check.png"
+  	});
     var aLabel = Ti.UI.createLabel({
-      text : '> '+inclusionsArray[i],
-      color : '#78ab78',
+      text : inclusionsArray[i].trim(),
+      color : 'black',
       height:Ti.UI.SIZE,
-      width : '100%',
-      left : 15,
+      width : '80%',
+      left : 5,
       right:5,
-      top:2
+      top:2,
     });
-    // Add to the parent view.
-    $.inclusionsView.add(aLabel);
+    view.add(image);
+    view.add(aLabel);
+    $.inclusionsView.add(view);
   }
 }
 function getExclusions() {
 	$.exclusions.text = "Exclusions: ";
   exclusionsArray = params.exclusions.split(',');
   for (var i = 0; i < exclusionsArray.length; i++) {
+  	var view=Ti.UI.createView({
+  		backgroundColor:'#f8dada',
+	layout: "horizontal",
+	height:Ti.UI.SIZE,
+	width:"100%"
+  	});
+  	var image=Ti.UI.createImageView({
+  		 left : 15,
+      top:2,
+      height:20,
+      width:20,
+      image:"/common/cross.png"
+  	});
     var aLabel = Ti.UI.createLabel({
-      text : '> '+exclusionsArray[i],
-      color : 'red',
+      text : exclusionsArray[i].trim(),
+      color : 'black',
       height:Ti.UI.SIZE,
-      width : '100%',
-      left : 15,
-      right:5,
-      top:2
+      width : '75%',
+      left : 5,
+      right:10,
+      top:2,
+      bottom:1
     });
-    $.exclusionsView.add(aLabel);
+    view.add(image);
+    view.add(aLabel);
+    $.exclusionsView.add(view);
   }
 }
 getInclusions();
@@ -62,7 +91,7 @@ if(params.exclusions && typeof(params.exclusions) !== 'undefined'){
  	$.exclusionsView.height=0;
  }
  if(params.method && typeof(params.method) !== 'undefined'){
- $.method.text = "Method: " + params.method;
+ $.methodvalue.text = params.method;
  }else{
  	 $.methodView.visible =  false;
  	 $.methodView.height=0;
@@ -71,5 +100,18 @@ if(params.exclusions && typeof(params.exclusions) !== 'undefined'){
  $.clockView.visible =  false;
  $.clockView.height=0;
  }else{
- 	 $.pickup.text = "Clock: " + params.pickup;
+ 	 $.pickup.text = "" + params.pickup;
+ 	 $.clockimage.image="/common/clock_icon.png";
  }
+
+ var clock=0;
+ $.clockimage.addEventListener('click',function(e){
+   if(clock==0){
+    $.popupLabel.visible=true;
+    clock=1;
+   }else{
+   	 $.popupLabel.visible=false;
+   	 clock=0;
+   }
+      });
+ 
