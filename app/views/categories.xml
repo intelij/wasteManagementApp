@@ -2,37 +2,43 @@
 	<Window class="container" navBarHidden="true">
 		<Require id="topbar" src="common/topbar"></Require>
 		<Require id="navbar" src="common/navbar"></Require>
-		<View id="selectedtypeview">
-			<Label id="selectedtypelabel"></Label>
-		</View>
 		<ScrollView  id="scrollview">
 			<View id="categoryView">
 				<Label id="categoryLabel"></Label>
 			</View>
 			<Label id="popupLabel"></Label>
-			<View id="clockView">
+			<View id="scheduleview">
+				<View id="scheduleimageView">
+					<ImageView id="clockimage"></ImageView>
+					<Label id="clocklabel">Schedule</Label>
+				</View>
 				<Label id="pickup"></Label>
-				<ImageView id="clockimage"></ImageView>
 			</View>
 			<View id="destinationView">
 				<View id="destinationimageView">
 					<ImageView id="destinationimage"></ImageView>
-					<Label id="destination">Destination: </Label>
+					<Label id="destination">Destination </Label>
 				</View>
 				<Label id="destinationvalue"></Label>
 			</View>
 			<View id="methodView">
 				<View id="methodimageView">
 					<ImageView id="methodimage"></ImageView>
-					<Label id="method">Method: </Label>
+					<Label id="method">Method </Label>
 				</View>
 				<Label id="methodvalue"></Label>
 			</View>
 			<View id="inclusionsView">
-				<Label id="inclusions"></Label>
+				<View id="inclusionsImageView">
+					<ImageView id="inclusionsImage"></ImageView>
+					<Label id="inclusions"></Label>
+				</View>
 			</View>
 			<View id="exclusionsView">
-				<Label id="exclusions"></Label>
+				<View id="exclusionsImageView">
+					<ImageView id="exclusionsImage"></ImageView>
+					<Label id="exclusions">Exclusions</Label>
+				</View>
 			</View>
 
 		</ScrollView>

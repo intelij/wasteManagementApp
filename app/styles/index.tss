@@ -1,9 +1,10 @@
 ".container": {
 	layout: "vertical",
-	backgroundColor: "#ffffff"
+	backgroundColor: "#ffffff",
+	fullscreen:true
 },
 "#complexLabel":{
-	text:"Where do you live?",
+	//text:"Where do you live?",
 	color:'black',
 	top:20,
 	left:20
@@ -16,6 +17,6 @@
 	separatorColor: "white",
 },
 '#complexSearchbar': {
-	// backgroundColor:'#87CEFA',
+	color:"black"
 }
 

@@ -1514,6 +1514,7 @@ var data = {
 			"types" : {
 				1 : {
 					"title" : "General Waste",
+					"backgroundColor" : "#6adcd4",
           "pickup" : "Monday, Thursday, Saturday",
           "destination" : "BBMP",
           "method": "Use a regular plastic/garbage bag; tie tightly and place outside your home.",
@@ -1521,6 +1522,7 @@ var data = {
 				},
 				2 : {
 					"title" : "White Bag - Paper/Cardboard",
+					"backgroundColor" : "#66ffb2",
           "pickup" : "Tuesday, Saturday",
           "destination" : "Smarthanam - For Recycling",
           "method":"Ensure that all discarded items are free of food remains. If they cannot be cleaned, put in the General Waste.",
@@ -1530,6 +1532,7 @@ var data = {
 				},
 				3 : {
 					"title" : "Kitchen Waste",
+					"backgroundColor" : "#74caee",
           "pickup" : "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday",
           "destination" : "Inhouse Bio-Digestor - BioGas and Manure",
           "method":"Use any container with lid without any paper or plastic liner. Make sure big items like melon rind/pineapple heads are cut into 1-2 inch pieces.",
@@ -1538,6 +1541,7 @@ var data = {
 				},
 				4 : {
 					"title" : "Light Blue Bag - Plastic/Metal/Tetrapak",
+					"backgroundColor" : "#ee7474",
           "pickup" : "Tuesday, Saturday",
           "destination" : "Smarthanam - Recycling",
           "method": "Rinse all containers before discarding.",
@@ -1546,6 +1550,7 @@ var data = {
 				},
 				5 : {
 					"title" : "Yellow Bag - Hygiene Waste",
+					"backgroundColor" : "#6adcd4",
           "pickup" : "Monday, Wednesday, Friday",
           "destination" : "Eco Maridi - Incineration",
           "method": "Put without wrapping. Tie Properly. Put in a bin with lid outside your house.",
@@ -1554,12 +1559,14 @@ var data = {
 				},
 				6 : {
 					"title" : "Puncture Proof Can",
+					"backgroundColor" : "#66ffb2",
           "pickup" : "Monday, Wednesday, Friday",
           "destination" : "Eco Maridi",
           "inclusions" : "sharp materials like needles, scalpels etc."
 				},
 				7 : {
 					"title" : "Glass Bottles",
+					"backgroundColor" : "#74caee",
           "pickup" : "Monday",
           "destination" : "Smarthanam - Recycling",
           "inclusions" : "Empty glass bottles and jars.",
@@ -1567,6 +1574,7 @@ var data = {
 				},
 				8 : {
 					"title" : "Garden Waste",
+					"backgroundColor" : "#ee7474",
           "pickup" : "None",
           "destination" : "Shredder - Inhouse Composting",
           "method": "Your gardener needs to take it to the shredder near clubhouse.",
@@ -1575,6 +1583,7 @@ var data = {
 				},
         9 : {
           "title" : "Blue Bag - Given by Eco Maridi",
+          "backgroundColor" : "#6adcd4",
           "pickup" : "None",
           "destination" : "Eco Maridi",
           "method": "For medical waste like syringes without needles, gloves catheters etc.",
@@ -1583,6 +1592,7 @@ var data = {
         },
         10 : {
           "title" : "E-Waste",
+          "backgroundColor" : "#66ffb2",
           "pickup" : "None",
           "destination" : "Smarthanam - Recycling",
           "inclusions" : "Mercury and Alkaline batteries, cells, wires, switch boxes, UPS, CD's, laptop, all chargers, hotplate, iron, microwave",
@@ -1590,12 +1600,14 @@ var data = {
         },
         11 : {
           "title" : "Newspaper",
+           "backgroundColor" : "#74caee",
           "pickup" : "Tuesday",
           "destination" : "Smarthanam - Recycling",
           "inclusions" : "Daily newspapers, supplements, pamphlets"
         },
         12 : {
           "title" : "Medicines",
+          "backgroundColor" : "#ee7474",
           "pickup" : "Monday, Thursday, Saturday",
           "destination" : "Every 3 Months",
           "method": "Used and expired medicines go into the collection box in the clubhouse.",
@@ -1847,9 +1859,10 @@ var data = {
 		},
 		2 : {
 			"name" : "Palm Meadows",
-			"types" : { 
+			"types" : {
 				1 : {
 					"title" : "General Waste",
+					"backgroundColor" : "#6adcd4",
           "pickup" : "Monday, Thursday, Saturday",
           "destination" : "BBMP",
           "method": "Use a regular plastic/garbage bag; tie tightly and place outside your home.",
@@ -1857,6 +1870,7 @@ var data = {
 				},
 				2 : {
 					"title" : "White Bag - Paper/Cardboard",
+					"backgroundColor" : "#66ffb2",
           "pickup" : "Tuesday, Saturday",
           "destination" : "Smarthanam - For Recycling",
           "method":"Ensure that all discarded items are free of food remains. If they cannot be cleaned, put in the General Waste.",
@@ -1866,6 +1880,7 @@ var data = {
 				},
 				3 : {
 					"title" : "Kitchen Waste",
+					"backgroundColor" : "#74caee",
           "pickup" : "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday",
           "destination" : "Inhouse Bio-Digestor - BioGas and Manure",
           "method":"Use any container with lid without any paper or plastic liner. Make sure big items like melon rind/pineapple heads are cut into 1-2 inch pieces.",
@@ -1874,6 +1889,7 @@ var data = {
 				},
 				4 : {
 					"title" : "Light Blue Bag - Plastic/Metal/Tetrapak",
+					"backgroundColor" : "#ee7474",
           "pickup" : "Tuesday, Saturday",
           "destination" : "Smarthanam - Recycling",
           "method": "Rinse all containers before discarding.",
@@ -1882,6 +1898,7 @@ var data = {
 				},
 				5 : {
 					"title" : "Yellow Bag - Hygiene Waste",
+					"backgroundColor" : "#6adcd4",
           "pickup" : "Monday, Wednesday, Friday",
           "destination" : "Eco Maridi - Incineration",
           "method": "Put without wrapping. Tie Properly. Put in a bin with lid outside your house.",
@@ -1890,12 +1907,14 @@ var data = {
 				},
 				6 : {
 					"title" : "Puncture Proof Can",
+					"backgroundColor" : "#66ffb2",
           "pickup" : "Monday, Wednesday, Friday",
           "destination" : "Eco Maridi",
           "inclusions" : "sharp materials like needles, scalpels etc."
 				},
 				7 : {
 					"title" : "Glass Bottles",
+					"backgroundColor" : "#74caee",
           "pickup" : "Monday",
           "destination" : "Smarthanam - Recycling",
           "inclusions" : "Empty glass bottles and jars.",
@@ -1903,6 +1922,7 @@ var data = {
 				},
 				8 : {
 					"title" : "Garden Waste",
+					"backgroundColor" : "#ee7474",
           "pickup" : "None",
           "destination" : "Shredder - Inhouse Composting",
           "method": "Your gardener needs to take it to the shredder near clubhouse.",
@@ -1911,6 +1931,7 @@ var data = {
 				},
         9 : {
           "title" : "Blue Bag - Given by Eco Maridi",
+          "backgroundColor" : "#6adcd4",
           "pickup" : "None",
           "destination" : "Eco Maridi",
           "method": "For medical waste like syringes without needles, gloves catheters etc.",
@@ -1919,6 +1940,7 @@ var data = {
         },
         10 : {
           "title" : "E-Waste",
+          "backgroundColor" : "#66ffb2",
           "pickup" : "None",
           "destination" : "Smarthanam - Recycling",
           "inclusions" : "Mercury and Alkaline batteries, cells, wires, switch boxes, UPS, CD's, laptop, all chargers, hotplate, iron, microwave",
@@ -1926,12 +1948,14 @@ var data = {
         },
         11 : {
           "title" : "Newspaper",
+           "backgroundColor" : "#74caee",
           "pickup" : "Tuesday",
           "destination" : "Smarthanam - Recycling",
           "inclusions" : "Daily newspapers, supplements, pamphlets"
         },
         12 : {
           "title" : "Medicines",
+          "backgroundColor" : "#ee7474",
           "pickup" : "Monday, Thursday, Saturday",
           "destination" : "Every 3 Months",
           "method": "Used and expired medicines go into the collection box in the clubhouse.",
@@ -2182,9 +2206,10 @@ var data = {
 		},
 		3 : {
 			"name" : "BBMP",
-			"types" :{ 
+			"types" :{
 				1 : {
 					"title" : "General Waste",
+					"backgroundColor" : "#6adcd4",
           "pickup" : "Monday, Thursday, Saturday",
           "destination" : "BBMP",
           "method": "Use a regular plastic/garbage bag; tie tightly and place outside your home.",
@@ -2192,6 +2217,7 @@ var data = {
 				},
 				2 : {
 					"title" : "White Bag - Paper/Cardboard",
+					"backgroundColor" : "#66ffb2",
           "pickup" : "Tuesday, Saturday",
           "destination" : "Smarthanam - For Recycling",
           "method":"Ensure that all discarded items are free of food remains. If they cannot be cleaned, put in the General Waste.",
@@ -2201,6 +2227,7 @@ var data = {
 				},
 				3 : {
 					"title" : "Kitchen Waste",
+					"backgroundColor" : "#74caee",
           "pickup" : "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday",
           "destination" : "Inhouse Bio-Digestor - BioGas and Manure",
           "method":"Use any container with lid without any paper or plastic liner. Make sure big items like melon rind/pineapple heads are cut into 1-2 inch pieces.",
@@ -2209,6 +2236,7 @@ var data = {
 				},
 				4 : {
 					"title" : "Light Blue Bag - Plastic/Metal/Tetrapak",
+					"backgroundColor" : "#ee7474",
           "pickup" : "Tuesday, Saturday",
           "destination" : "Smarthanam - Recycling",
           "method": "Rinse all containers before discarding.",
@@ -2217,6 +2245,7 @@ var data = {
 				},
 				5 : {
 					"title" : "Yellow Bag - Hygiene Waste",
+					"backgroundColor" : "#6adcd4",
           "pickup" : "Monday, Wednesday, Friday",
           "destination" : "Eco Maridi - Incineration",
           "method": "Put without wrapping. Tie Properly. Put in a bin with lid outside your house.",
@@ -2225,12 +2254,14 @@ var data = {
 				},
 				6 : {
 					"title" : "Puncture Proof Can",
+					"backgroundColor" : "#66ffb2",
           "pickup" : "Monday, Wednesday, Friday",
           "destination" : "Eco Maridi",
           "inclusions" : "sharp materials like needles, scalpels etc."
 				},
 				7 : {
 					"title" : "Glass Bottles",
+					"backgroundColor" : "#74caee",
           "pickup" : "Monday",
           "destination" : "Smarthanam - Recycling",
           "inclusions" : "Empty glass bottles and jars.",
@@ -2238,6 +2269,7 @@ var data = {
 				},
 				8 : {
 					"title" : "Garden Waste",
+					"backgroundColor" : "#ee7474",
           "pickup" : "None",
           "destination" : "Shredder - Inhouse Composting",
           "method": "Your gardener needs to take it to the shredder near clubhouse.",
@@ -2246,6 +2278,7 @@ var data = {
 				},
         9 : {
           "title" : "Blue Bag - Given by Eco Maridi",
+          "backgroundColor" : "#6adcd4",
           "pickup" : "None",
           "destination" : "Eco Maridi",
           "method": "For medical waste like syringes without needles, gloves catheters etc.",
@@ -2254,6 +2287,7 @@ var data = {
         },
         10 : {
           "title" : "E-Waste",
+          "backgroundColor" : "#66ffb2",
           "pickup" : "None",
           "destination" : "Smarthanam - Recycling",
           "inclusions" : "Mercury and Alkaline batteries, cells, wires, switch boxes, UPS, CD's, laptop, all chargers, hotplate, iron, microwave",
@@ -2261,19 +2295,20 @@ var data = {
         },
         11 : {
           "title" : "Newspaper",
+           "backgroundColor" : "#74caee",
           "pickup" : "Tuesday",
           "destination" : "Smarthanam - Recycling",
           "inclusions" : "Daily newspapers, supplements, pamphlets"
         },
         12 : {
           "title" : "Medicines",
+          "backgroundColor" : "#ee7474",
           "pickup" : "Monday, Thursday, Saturday",
           "destination" : "Every 3 Months",
           "method": "Used and expired medicines go into the collection box in the clubhouse.",
           "inclusions" : "All unused and expired medicines",
           "exclusions" : "syringes, catheters, medical instruments"
         }
-
 			},
 			"classification" : {
 				5 : 2,

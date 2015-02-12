@@ -20,9 +20,9 @@ function showSuggestions(data) {
       rightImage : '/common/keyboard-arrow-right.png',
     });
     if (i % 2 == 0) {
-      resultRow.backgroundColor = "#cccccc";
-    } else {
       resultRow.backgroundColor = "#e0e0e0";
+    } else {
+      resultRow.backgroundColor = "#eeeeee";
     }
     tableData.push(resultRow);
   }
@@ -56,6 +56,7 @@ function selectWord(e) {
   var typeMethod = complexDetail.types[typeId].method ;
   var typeInclusions = complexDetail.types[typeId].inclusions;
   var typeExclusions = complexDetail.types[typeId].exclusions ;
+  var backgroundcolor=complexDetail.types[typeId].backgroundColor;
   Alloy.createController('/categories', {
     data : e.rowData,
     title : typeTitle,
@@ -63,7 +64,8 @@ function selectWord(e) {
     destination : typeDestination,
     method : typeMethod,
     inclusions : typeInclusions,
-    exclusions : typeExclusions
+    exclusions : typeExclusions,
+    backgroundcolor:backgroundcolor
   }).getView().open();
 }
 
@@ -77,7 +79,7 @@ function searchWord(e) {
 }
 
 $.navbar.leftNav.addEventListener('click', function(e) {
-  $.index.close();
+  Alloy.createController('index').getView().open();
 });
 $.topbar.logout.addEventListener('click', function(e) {
   Alloy.createController('index').getView().open();
@@ -85,5 +87,5 @@ $.topbar.logout.addEventListener('click', function(e) {
 $.navbar.left.image = '/common/back_button.png';
 //$.navbar.right.image = '/common/settings.png';
 $.topbar.left.image = '/common/Small_logo.png';
-	$.topbar.right.image = '/common/logout_button.png';
+	$.topbar.right.image = '/common/home_button.png';
 $.navbar.setTitle(params.data);

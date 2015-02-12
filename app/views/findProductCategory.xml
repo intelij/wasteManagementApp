@@ -2,7 +2,7 @@
 	<Window id="index" class="container" navBarHidden="true">
 		<Require id="topbar" src="common/topbar"/>
 		<Require id="navbar" src="common/navbar"/>
-		<SearchBar id="searchbar" onChange="searchWord" color="black" width="92%" height="50" top="10" hintText="Search the waste product"/>
+		<SearchBar id="searchbar" onChange="searchWord" color="black" width="92%" height="50" top="10" hintText="What do you want to dispose off?"/>
 		<TableView id="resultsTable" onClick="selectWord" searchAsChild="false"></TableView>
 	</Window>
 </Alloy>
