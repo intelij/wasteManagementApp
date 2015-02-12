@@ -4,13 +4,15 @@ var tableDataexclusions = [];
 var inclusionsArray = [];
 var exclusionsArray = [];
 
-$.navbar.setTitle("Where it Goes");
-$.selectedtypelabel.text = params.data.title;
+$.navbar.setTitle(params.data.title);
+//$.selectedtypelabel.text = params.data.title;
+//$.selectedtypeview.backgroundColor=params.backgroundcolor;
 $.categoryLabel.text = params.title;
+$.categoryView.backgroundColor=params.backgroundcolor;
 $.destinationvalue.text = params.destination;
-$.inclusions.text = "Inclusions: ";
+$.inclusions.text = "Inclusions ";
 $.topbar.left.image = '/common/Small_logo.png';
-	$.topbar.right.image = '/common/logout_button.png';
+	$.topbar.right.image = '/common/home_button.png';
 $.navbar.left.image = '/common/back_button.png';
 //$.navbar.right.image = '/common/settings.png';
 $.navbar.leftNav.addEventListener('click', function(e) {
@@ -31,10 +33,10 @@ function getInclusions() {
   	});
   	var image=Ti.UI.createImageView({
   		 left : 15,
-      top:2,
-      height:20,
-      width:20,
-      image:"/common/check.png"
+      top:8,
+      height:10,
+      width:10,
+      image:"/common/bullet_point.png"
   	});
     var aLabel = Ti.UI.createLabel({
       text : inclusionsArray[i].trim(),
@@ -51,7 +53,7 @@ function getInclusions() {
   }
 }
 function getExclusions() {
-	$.exclusions.text = "Exclusions: ";
+	//$.exclusions.text = "Exclusions ";
   exclusionsArray = params.exclusions.split(',');
   for (var i = 0; i < exclusionsArray.length; i++) {
   	var view=Ti.UI.createView({
@@ -62,10 +64,10 @@ function getExclusions() {
   	});
   	var image=Ti.UI.createImageView({
   		 left : 15,
-      top:2,
-      height:20,
-      width:20,
-      image:"/common/cross.png"
+      top:8,
+      height:10,
+      width:10,
+      image:"/common/bullet_point.png"
   	});
     var aLabel = Ti.UI.createLabel({
       text : exclusionsArray[i].trim(),
@@ -97,8 +99,8 @@ if(params.exclusions && typeof(params.exclusions) !== 'undefined'){
  	 $.methodView.height=0;
  }
  if(params.pickup == 'None'){
- $.clockView.visible =  false;
- $.clockView.height=0;
+ $.scheduleview.visible =  false;
+ $.scheduleview.height=0;
  }else{
  	 $.pickup.text = "" + params.pickup;
  	 $.clockimage.image="/common/clock_icon.png";

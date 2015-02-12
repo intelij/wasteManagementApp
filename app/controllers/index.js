@@ -7,11 +7,7 @@ if (site_id == 0) {
   $.navbar.settings.hide();
   $.index.open();
 } else {
-	$.topbar.left.image = '/common/Small_logo.png';
-	$.topbar.right.image = '/common/logout_button.png';
-  $.navbar.right.image = '/common/arrow-right.png';
-  $.navbar.setTitle("Waste Segregation");
-  $.navbar.settings.addEventListener('click', function(e) {
+	$.navbar.settings.addEventListener('click', function(e) {
     Alloy.createController('/findProductCategory', {
       data : data[site_id].name,
       id : site_id
@@ -23,8 +19,7 @@ if (site_id == 0) {
     id : site_id
   }).getView().open();
 }
-showComplexes();
-function showComplexes() {
+(function init(){
   var keys = Object.keys(data);
   for (var i = 0; i < keys.length; i++) {
     var id = keys[i];
@@ -40,14 +35,17 @@ function showComplexes() {
       rightImage : '/common/keyboard-arrow-right.png',
     });
     if (i % 2 == 0) {
-      resultRow.backgroundColor = "#cccccc";
-    } else {
       resultRow.backgroundColor = "#e0e0e0";
+    } else {
+      resultRow.backgroundColor = "#eeeeee";
     }
     tableData.push(resultRow);
     $.complexTable.data = tableData;
   }
-}
+  $.topbar.left.image = '/common/Small_logo.png';
+  $.navbar.right.image = '/common/arrow-right.png';
+  $.navbar.setTitle("Where do you live");
+})();
 
 function selectComplex(e) {
   var complexID = e.rowData.id;

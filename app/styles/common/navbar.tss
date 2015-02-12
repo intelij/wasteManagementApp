@@ -21,7 +21,9 @@
 	 textAlign:"center",
 	 font:{
 	 	fontSize: 20,
-	 }
+	 },
+	 //textAlign:'center',
+ellipsize :true
 },
 "#right":{
 	//right:5,
