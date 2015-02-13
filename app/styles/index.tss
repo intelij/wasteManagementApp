@@ -1,7 +1,6 @@
 ".container": {
 	layout: "vertical",
 	backgroundColor: "#ffffff",
-	fullscreen:true
 },
 "#complexLabel":{
 	//text:"Where do you live?",

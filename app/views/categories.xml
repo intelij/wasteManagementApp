@@ -17,14 +17,14 @@
 			<View id="destinationView">
 				<View id="destinationimageView">
 					<ImageView id="destinationimage"></ImageView>
-					<Label id="destination">Destination </Label>
+					<Label id="destination">Destination</Label>
 				</View>
 				<Label id="destinationvalue"></Label>
 			</View>
 			<View id="methodView">
 				<View id="methodimageView">
 					<ImageView id="methodimage"></ImageView>
-					<Label id="method">Method </Label>
+					<Label id="method">Method</Label>
 				</View>
 				<Label id="methodvalue"></Label>
 			</View>

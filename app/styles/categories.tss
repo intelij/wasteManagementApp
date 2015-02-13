@@ -1,52 +1,53 @@
-".container": {
+	".container": {
 	layout: "vertical",
 	backgroundColor: "#ffffff"
+	},
+	"#scrollview":{
+	top:2,
+	left:0,
+	backgroundColor:"white",
+	width:"100%",
+	height:"100%",
+	layout: "vertical",
+	},
+"#categoryView":{
+	top:2,
+	height:55,
+	left:10,
+	right:10,
+	borderRadius:10
 },
-/*
-"#selectedtypeview":{
-	top:0,
-	height:Ti.UI.SIZE,
-},
-"#selectedtypelabel":{
-	 top:5,
-  height:Ti.UI.SIZE,
-    width:'100%',
-    left:10,
-    right:5,
-    bottom:5,
-    color:'black',
-    font:  {
-    fontSize: 22,
-    fontFamily: "burnstown_dam"
-},
-textAlign:'center',
-ellipsize :true
-},*/
-
 "#categoryLabel": {
-	top:3,
-	bottom:3,
     height:Ti.UI.SIZE,
     width:'100%',
     left:10,
     font:  {
-    fontSize: 25,
+    fontSize: 22,
     fontFamily: "burnstown_dam"
 },
     color:'white'
+},
+"#scheduleview":{
+	top:2,
+	height:Ti.UI.SIZE,
+	left:10,
+	right:10,
+	backgroundColor:'#eeeeee',
+	layout: "vertical",
+	borderRadius:10
 },
 "#scheduleimageView":{
 	top:0,
 	height:Ti.UI.SIZE,
 	left:0,
 	backgroundColor:'#eeeeee',
-	layout: "horizontal",
+	layout: "horizontal"
 },
 "#clockimage":{
 	 top:6,
     height:30,
     width:30,
-    left:10,
+    left:10
 },
 "#clocklabel":{
 	 top:8,
@@ -55,17 +56,31 @@ ellipsize :true
     left:5,
     color:'black',
      font:  {
-    fontSize: 23,
-    fontFamily: "burnstown_dam"
+    fontSize: 20,
+    fontFamily: "Oswald Medium "
     }
 },
 "#pickup": {
-	 top:1,
+	top:2,
+	 bottom:2,
     height:Ti.UI.SIZE,
-     width:'90%',
-    left:25,
+     width:'80%',
+    left:43,
     right:10,
-    color:'black'
+    color:'black',
+      font:  {
+    fontSize: 15,
+    fontFamily: "Open Sans"
+    }
+},
+"#destinationView":{
+	top:2,
+	height:Ti.UI.SIZE,
+	left:10,
+	right:10,
+	backgroundColor:'#eeeeee',
+	layout: "vertical",
+	borderRadius:10
 },
 "#destinationimage":{
 	top:6,
@@ -79,7 +94,7 @@ ellipsize :true
 	height:Ti.UI.SIZE,
 	left:0,
 	backgroundColor:'#eeeeee',
-	layout: "horizontal",
+	layout: "horizontal"
 },
 "#destination":{
 	 top:8,
@@ -88,18 +103,32 @@ ellipsize :true
     left:5,
     color:'black',
      font:  {
-    fontSize: 23,
-    fontFamily: "burnstown_dam"
+    fontSize: 20,
+    fontFamily: "Oswald Medium"
     }
 },
 "#destinationvalue":{
-	 top:1,
+	top:2,
+	 bottom:2,
    height:Ti.UI.SIZE,
-    width:'90%',
-    left:25,
+    width:'85%',
+    left:43,
      right:10,
     color:'black',
-    bottom:5
+      font:  {
+    fontSize: 15,
+    fontFamily: "Open Sans"
+    }
+},
+
+"#methodView":{
+	top:2,
+	height:Ti.UI.SIZE,
+	left:10,
+	right:10,
+	backgroundColor:'#eeeeee',
+	layout: "vertical",
+	borderRadius:10
 },
 "#methodimage":{
 	top:6,
@@ -113,7 +142,7 @@ ellipsize :true
 	height:Ti.UI.SIZE,
 	left:0,
 	backgroundColor:'#eeeeee',
-	layout: "horizontal",
+	layout: "horizontal"
 },
 "#method":{
 	 top:8,
@@ -122,74 +151,25 @@ ellipsize :true
     left:5,
     color:'black',
      font:  {
-    fontSize: 23,
-    fontFamily: "burnstown_dam"
+    fontSize: 20,
+    fontFamily: "Oswald Medium"
     }
     
 },
 "#methodvalue":{
-	 top:1,
+	 top:2,
+	 bottom:2,
    height:Ti.UI.SIZE,
-    width:'90%',
-    left:25,
+    width:'85%',
+    left:43,
     right:10,
     color:'black',
-    bottom:5
-},
-"#inclusions":{
-	top:6,
-	left:2,
-	height:Ti.UI.SIZE,
-    width:'80%',
-    color:'black',
-    font:  {
-    fontSize: 23,
-    fontFamily: "burnstown_dam"
+      font:  {
+    fontSize: 15,
+    fontFamily: "Open Sans"
     }
 },
-"#scrollview":{
-	top:2,
-	left:0,
-	backgroundColor:"white",
-	width:"100%",
-	height:"100%",
-	layout: "vertical",
-},
-"#categoryView":{
-	top:2,
-	height:"10%",
-	left:10,
-	right:10,
-	layout: "vertical",
-	borderRadius:10
-},
-"#scheduleview":{
-	top:2,
-	height:"11%",
-	left:10,
-	right:10,
-	backgroundColor:'#eeeeee',
-	layout: "horizontal",
-	borderRadius:10
-},
-"#destinationView":{
-	top:2,
-	height:"12%",
-	left:10,
-	right:10,
-	backgroundColor:'#eeeeee',
-	layout: "vertical",
-	borderRadius:10
-},
-"#methodView":{
-	top:2,
-	height:Ti.UI.SIZE,
-	left:10,
-	right:10,
-	backgroundColor:'#eeeeee',
-	layout: "vertical",
-	borderRadius:10
-},
+
 "#inclusionsImage":{
 	top:6,
     height:30,
@@ -202,7 +182,7 @@ ellipsize :true
 	height:Ti.UI.SIZE,
 	left:0,
 	backgroundColor:'#e6f8da',
-	layout: "horizontal",
+	layout: "horizontal"
 },
 "#inclusionsView":{
 	top:2,
@@ -213,6 +193,18 @@ ellipsize :true
 	layout: "vertical",
 	borderRadius:10
 },
+"#inclusions":{
+	top:6,
+	left:2,
+	height:Ti.UI.SIZE,
+    width:'80%',
+    color:'black',
+    font:  {
+    fontSize: 20,
+    fontFamily: "burnstown_dam"
+    }
+},
+
 "#exclusionsImage":{
 	top:6,
     height:30,
@@ -225,7 +217,7 @@ ellipsize :true
 	height:Ti.UI.SIZE,
 	left:0,
 	backgroundColor:'#f8dada',
-	layout: "horizontal",
+	layout: "horizontal"
 },
 "#exclusionsView":{
 	top:2,
@@ -244,10 +236,11 @@ ellipsize :true
     width:'80%',
     color:'black',
     font:  {
-    fontSize: 23,
+    fontSize: 20,
     fontFamily: "burnstown_dam"
     }
-},
+}
+/*
 "#popupLabel":{
 	top:-20,
 	zIndex:10,
@@ -256,7 +249,8 @@ ellipsize :true
 	visible:false,
 	color:'black',
 	left:20,
-	height:Ti.UI.SIZE,
+	height:Ti.UI.SIZE
 	//borderRadius:10
-}
+}*/
+
 
