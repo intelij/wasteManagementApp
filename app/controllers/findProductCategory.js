@@ -53,10 +53,10 @@ function selectWord(e) {
   var typeTitle = complexDetail.types[typeId].title;
   var typePickup = complexDetail.types[typeId].pickup || 'None';
   var typeDestination = complexDetail.types[typeId].destination;
-  var typeMethod = complexDetail.types[typeId].method ;
+  var typeMethod = complexDetail.types[typeId].method;
   var typeInclusions = complexDetail.types[typeId].inclusions;
-  var typeExclusions = complexDetail.types[typeId].exclusions ;
-  var backgroundcolor=complexDetail.types[typeId].backgroundColor;
+  var typeExclusions = complexDetail.types[typeId].exclusions;
+  var backgroundcolor = complexDetail.types[typeId].backgroundColor;
   Alloy.createController('/categories', {
     data : e.rowData,
     title : typeTitle,
@@ -65,7 +65,7 @@ function selectWord(e) {
     method : typeMethod,
     inclusions : typeInclusions,
     exclusions : typeExclusions,
-    backgroundcolor:backgroundcolor
+    backgroundcolor : backgroundcolor
   }).getView().open();
 }
 
@@ -87,5 +87,5 @@ $.topbar.logout.addEventListener('click', function(e) {
 $.navbar.left.image = '/common/back_button.png';
 //$.navbar.right.image = '/common/settings.png';
 $.topbar.left.image = '/common/Small_logo.png';
-	$.topbar.right.image = '/common/home_button.png';
+$.topbar.right.image = '/common/cog.png';
 $.navbar.setTitle(params.data);

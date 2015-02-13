@@ -7,7 +7,7 @@ if (site_id == 0) {
   $.navbar.settings.hide();
   $.index.open();
 } else {
-	$.navbar.settings.addEventListener('click', function(e) {
+  $.navbar.settings.addEventListener('click', function(e) {
     Alloy.createController('/findProductCategory', {
       data : data[site_id].name,
       id : site_id
@@ -19,7 +19,7 @@ if (site_id == 0) {
     id : site_id
   }).getView().open();
 }
-(function init(){
+(function init() {
   var keys = Object.keys(data);
   for (var i = 0; i < keys.length; i++) {
     var id = keys[i];
@@ -43,7 +43,7 @@ if (site_id == 0) {
     $.complexTable.data = tableData;
   }
   $.topbar.left.image = '/common/Small_logo.png';
-  $.navbar.right.image = '/common/arrow-right.png';
+  // $.navbar.right.image = '/common/arrow-right.png';
   $.navbar.setTitle("Where do you live");
 })();
 
