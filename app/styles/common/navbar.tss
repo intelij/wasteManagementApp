@@ -17,13 +17,13 @@
 	// /borderColor: "#ffffff"
 },
 "#midText": {
-	 color:"black",
-	 textAlign:"center",
-	 font:{
-	 	fontSize: 20,
-	 },
+	color:"black",
+	textAlign:"center",
+	font:{
+		fontSize: 20,
+	},
 	 //textAlign:'center',
-ellipsize :true
+	ellipsize :true
 },
 "#right":{
 	//right:5,

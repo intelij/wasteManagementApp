@@ -19,11 +19,13 @@ function showSuggestions(data) {
       textAlign : "center",
       rightImage : '/common/keyboard-arrow-right.png',
     });
+    /*
     if (i % 2 == 0) {
-      resultRow.backgroundColor = "#e0e0e0";
-    } else {
       resultRow.backgroundColor = "#eeeeee";
+    } else {
+      resultRow.backgroundColor = "#f2f2f2";
     }
+   */
     tableData.push(resultRow);
   }
 
@@ -40,7 +42,7 @@ function showSuggestions(data) {
 function getCategoryId(title) {
   var category;
   Object.keys(data).forEach(function(k) {
-    if (data[k].title == title) {
+    if (data[k] == title) {
       category = k;
     }
   });
@@ -48,15 +50,19 @@ function getCategoryId(title) {
 }
 
 function selectWord(e) {
+  console.log(e.rowData.title);
   var categoryID = getCategoryId(e.rowData.title);
-  var typeId = complexDetail.classification[categoryID];
-  var typeTitle = complexDetail.types[typeId].title;
-  var typePickup = complexDetail.types[typeId].pickup || 'None';
-  var typeDestination = complexDetail.types[typeId].destination;
-  var typeMethod = complexDetail.types[typeId].method;
-  var typeInclusions = complexDetail.types[typeId].inclusions;
-  var typeExclusions = complexDetail.types[typeId].exclusions;
-  var backgroundcolor = complexDetail.types[typeId].backgroundColor;
+  console.log(categoryID);
+  console.log(complexDetail.classification);
+  var typeId = complexDetail.classification[categoryID][0];
+
+  var typeTitle = isNaN(typeId) ? typeId : complexDetail.types[typeId].title;
+  var typePickup = isNaN(typeId) ? null : complexDetail.types[typeId].schedule || 'None';
+  var typeDestination = isNaN(typeId) ? null : complexDetail.types[typeId].destination;
+  var typeMethod = isNaN(typeId) ? null : complexDetail.types[typeId].method;
+  var typeInclusions = isNaN(typeId) ? null : complexDetail.types[typeId].inclusions;
+  var typeExclusions = isNaN(typeId) ? null : complexDetail.types[typeId].exclusions;
+  var backgroundColor = isNaN(typeId) ? "000000" : complexDetail.types[typeId].backgroundColor;
   Alloy.createController('/categories', {
     data : e.rowData,
     title : typeTitle,
@@ -65,7 +71,7 @@ function selectWord(e) {
     method : typeMethod,
     inclusions : typeInclusions,
     exclusions : typeExclusions,
-    backgroundcolor : backgroundcolor
+    backgroundColor : backgroundColor
   }).getView().open();
 }
 

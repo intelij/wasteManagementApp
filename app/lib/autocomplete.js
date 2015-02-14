@@ -1,6 +1,8 @@
 var Autocomplete = function(data, synonyms) {
+  console.log(data);
+  console.log(Object.keys(data));
   this.data = Object.keys(data).map(function(k) {
-    return data[k];
+    return {"title" : data[k]};
   });
   this.init = function() {
     function getSynonyms(array) {

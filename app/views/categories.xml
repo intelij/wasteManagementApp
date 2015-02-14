@@ -9,35 +9,35 @@
 			<Label id="popupLabel"></Label>
 			<View id="scheduleview">
 				<View id="scheduleimageView">
-					<ImageView id="clockimage"></ImageView>
-					<Label id="clocklabel">Schedule</Label>
+					<ImageView class="icon" id="clockimage"></ImageView>
+					<Label class="heading" id="clockLabel">Schedule</Label>
 				</View>
 				<Label id="pickup"></Label>
 			</View>
 			<View id="destinationView">
 				<View id="destinationimageView">
-					<ImageView id="destinationimage"></ImageView>
-					<Label id="destination">Destination</Label>
+					<ImageView class="icon" id="destinationimage"></ImageView>
+					<Label class="heading" id="destinationLabel">Destination</Label>
 				</View>
 				<Label id="destinationvalue"></Label>
 			</View>
 			<View id="methodView">
 				<View id="methodimageView">
-					<ImageView id="methodimage"></ImageView>
-					<Label id="method">Method</Label>
+					<ImageView class="icon" id="methodimage"></ImageView>
+					<Label class="heading" id="methodLabel">Method</Label>
 				</View>
 				<Label id="methodvalue"></Label>
 			</View>
 			<View id="inclusionsView">
 				<View id="inclusionsImageView">
-					<ImageView id="inclusionsImage"></ImageView>
-					<Label id="inclusions"></Label>
+					<ImageView class="icon" id="inclusionsImage"></ImageView>
+					<Label class="heading" id="inclusionsLabel"> Inclusions </Label>
 				</View>
 			</View>
 			<View id="exclusionsView">
 				<View id="exclusionsImageView">
-					<ImageView id="exclusionsImage"></ImageView>
-					<Label id="exclusions">Exclusions</Label>
+					<ImageView class="icon" id="exclusionsImage"></ImageView>
+					<Label class="heading" id="exclusionsLabel">Exclusions</Label>
 				</View>
 			</View>
 

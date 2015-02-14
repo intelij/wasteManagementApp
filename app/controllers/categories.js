@@ -8,9 +8,7 @@ $.navbar.setTitle(params.data.title);
 //$.selectedtypelabel.text = params.data.title;
 //$.selectedtypeview.backgroundColor=params.backgroundcolor;
 $.categoryLabel.text = params.title;
-$.categoryView.backgroundColor = params.backgroundcolor;
-$.destinationvalue.text = params.destination;
-$.inclusions.text = "Inclusions ";
+$.categoryView.backgroundColor = params.backgroundColor;
 $.topbar.left.image = '/common/Small_logo.png';
 $.topbar.right.image = '/common/cog.png';
 $.navbar.left.image = '/common/back_button.png';
@@ -34,7 +32,6 @@ function getInclusions() {
     });
     var image = Ti.UI.createImageView({
       left : 26,
-      top : 8,
       height : 10,
       width : 10,
       image : "/common/bullet_point.png"
@@ -96,25 +93,40 @@ function getExclusions() {
   }
 }
 
-getInclusions();
+if (params.inclusions) {
+  getInclusions();  
+} else {
+  $.inclusionsView.visible = false;
+  $.inclusionsView.height = 0;
+}
+
 if (params.exclusions && typeof (params.exclusions) !== 'undefined') {
   getExclusions();
 } else {
   $.exclusionsView.visible = false;
   $.exclusionsView.height = 0;
 }
+
 if (params.method && typeof (params.method) !== 'undefined') {
   $.methodvalue.text = params.method;
 } else {
   $.methodView.visible = false;
   $.methodView.height = 0;
 }
+
+if (params.destination && typeof (params.destination) !== 'undefined') {
+  console.log(params.destination);
+  $.destinationvalue.text = params.destination;
+} else {
+  $.destinationView.visible = false;
+  $.destinationView.height = 0;
+}
+
 if (params.pickup == 'None') {
   $.scheduleview.visible = false;
   $.scheduleview.height = 0;
 } else {
   $.pickup.text = "" + params.pickup;
-  $.clockimage.image = "/common/clock_icon.png";
 }
 
 /*

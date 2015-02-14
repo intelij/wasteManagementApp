@@ -10,7 +10,7 @@
 	backgroundColor: "transparent",
 	visible:true,
 	rowHeight: 60,
-	separatorColor: "white"
+	separatorColor: "grey"
 },
 '#searchbar': {
 	// backgroundColor:'#87CEFA',

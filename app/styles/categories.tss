@@ -1,15 +1,31 @@
-	".container": {
+".container": {
 	layout: "vertical",
 	backgroundColor: "#ffffff"
-	},
-	"#scrollview":{
+},
+".heading" : {
+  height:Ti.UI.SIZE,
+  width:'80%',
+  color:'black',
+  left : 5,
+  font:  {
+    fontSize: 20,
+    fontFamily: "Oswald-Medium"
+  }
+},
+".icon" : {
+	top:6,
+  height:30,
+  width:30,
+  left:10,
+},
+"#scrollview": {
 	top:2,
 	left:0,
 	backgroundColor:"white",
 	width:"100%",
 	height:"100%",
-	layout: "vertical",
-	},
+	layout: "vertical"
+},
 "#categoryView":{
 	top:2,
 	height:55,
@@ -18,14 +34,14 @@
 	borderRadius:10
 },
 "#categoryLabel": {
-    height:Ti.UI.SIZE,
-    width:'100%',
-    left:10,
-    font:  {
+  height:Ti.UI.SIZE,
+  width:'100%',
+  left:10,
+  font:  {
     fontSize: 22,
-    fontFamily: "burnstown_dam"
-},
-    color:'white'
+    fontFamily: "Oswald-Light"
+  },
+  color:'white'
 },
 "#scheduleview":{
 	top:2,
@@ -44,34 +60,20 @@
 	layout: "horizontal"
 },
 "#clockimage":{
-	 top:6,
-    height:30,
-    width:30,
-    left:10
-},
-"#clocklabel":{
-	 top:8,
-   height:Ti.UI.SIZE,
-    width:'80%',
-    left:5,
-    color:'black',
-     font:  {
-    fontSize: 20,
-    fontFamily: "Oswald Medium "
-    }
+  image: "/common/clock_icon.png"
 },
 "#pickup": {
 	top:2,
-	 bottom:2,
-    height:Ti.UI.SIZE,
-     width:'80%',
-    left:43,
-    right:10,
-    color:'black',
-      font:  {
+	bottom:2,
+  height:Ti.UI.SIZE,
+  width:'80%',
+  left:43,
+  right:10,
+  color:'black',
+  font:  {
     fontSize: 15,
     fontFamily: "Open Sans"
-    }
+  }
 },
 "#destinationView":{
 	top:2,
@@ -83,11 +85,7 @@
 	borderRadius:10
 },
 "#destinationimage":{
-	top:6,
-    height:30,
-    width:30,
-    left:10,
-    image:"/common/destination_icon.png"
+  image:"/common/destination_icon.png"
 }
 "#destinationimageView":{
 	top:0,
@@ -96,29 +94,18 @@
 	backgroundColor:'#eeeeee',
 	layout: "horizontal"
 },
-"#destination":{
-	 top:8,
-   height:Ti.UI.SIZE,
-    width:'80%',
-    left:5,
-    color:'black',
-     font:  {
-    fontSize: 20,
-    fontFamily: "Oswald Medium"
-    }
-},
 "#destinationvalue":{
 	top:2,
-	 bottom:2,
-   height:Ti.UI.SIZE,
-    width:'85%',
-    left:43,
-     right:10,
-    color:'black',
-      font:  {
+	bottom:2,
+  height:Ti.UI.SIZE,
+  width:'85%',
+  left:43,
+  right:10,
+  color:'black',
+  font: {
     fontSize: 15,
     fontFamily: "Open Sans"
-    }
+  }
 },
 
 "#methodView":{
@@ -131,30 +118,14 @@
 	borderRadius:10
 },
 "#methodimage":{
-	top:6,
-    height:30,
-    width:30,
-    left:10,
-    image:"/common/method_icon.png"
-}
+  image:"/common/method_icon.png"
+},
 "#methodimageView":{
 	top:0,
 	height:Ti.UI.SIZE,
 	left:0,
 	backgroundColor:'#eeeeee',
 	layout: "horizontal"
-},
-"#method":{
-	 top:8,
-   height:Ti.UI.SIZE,
-    width:'80%',
-    left:5,
-    color:'black',
-     font:  {
-    fontSize: 20,
-    fontFamily: "Oswald Medium"
-    }
-    
 },
 "#methodvalue":{
 	 top:2,
@@ -171,11 +142,7 @@
 },
 
 "#inclusionsImage":{
-	top:6,
-    height:30,
-    width:30,
-    left:10,
-    image:"/common/check.png"
+  image:"/common/check.png"
 }
 "#inclusionsImageView":{
 	top:0,
@@ -193,24 +160,9 @@
 	layout: "vertical",
 	borderRadius:10
 },
-"#inclusions":{
-	top:6,
-	left:2,
-	height:Ti.UI.SIZE,
-    width:'80%',
-    color:'black',
-    font:  {
-    fontSize: 20,
-    fontFamily: "burnstown_dam"
-    }
-},
 
 "#exclusionsImage":{
-	top:6,
-    height:30,
-    width:30,	
-    left:10,
-    image:"/common/cross.png"
+  image:"/common/cross.png"
 },
 "#exclusionsImageView":{
 	top:0,
@@ -228,29 +180,6 @@
 	layout: "vertical",
 	bottom:2,
 	borderRadius:10
-},
-"#exclusions":{
-	top:6,
-	left:2,
-    height:Ti.UI.SIZE,
-    width:'80%',
-    color:'black',
-    font:  {
-    fontSize: 20,
-    fontFamily: "burnstown_dam"
-    }
 }
-/*
-"#popupLabel":{
-	top:-20,
-	zIndex:10,
-	backgroundColor: "#63b0a4",
-	text:"Pickup",
-	visible:false,
-	color:'black',
-	left:20,
-	height:Ti.UI.SIZE
-	//borderRadius:10
-}*/
 
 
