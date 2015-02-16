@@ -2,7 +2,7 @@
 	layout: "vertical",
 	backgroundColor: "#eeeeee"
 },
-".infoView":{
+".infoMainView":{
 	top:2,
 	height:Ti.UI.SIZE,
 	left:10,
@@ -11,7 +11,7 @@
 	layout: "vertical",
 	borderRadius:10
 },
-".infoChaildView":{
+".infoView":{
 	top:0,
 	height:Ti.UI.SIZE,
 	left:0,
