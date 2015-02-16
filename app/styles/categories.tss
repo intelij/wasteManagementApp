@@ -1,8 +1,24 @@
 ".container": {
 	layout: "vertical",
-	backgroundColor: "#ffffff"
+	backgroundColor: "#eeeeee"
 },
-".heading" : {
+".infoView":{
+	top:2,
+	height:Ti.UI.SIZE,
+	left:10,
+	right:10,
+	backgroundColor:'#ffffff',
+	layout: "vertical",
+	borderRadius:10
+},
+".infoChaildView":{
+	top:0,
+	height:Ti.UI.SIZE,
+	left:0,
+	backgroundColor:'transparent',
+	layout: "horizontal"
+},
+".heading": {
   height:Ti.UI.SIZE,
   width:'80%',
   color:'black',
@@ -12,16 +28,29 @@
     fontFamily: "Oswald-Medium"
   }
 },
-".icon" : {
+".icon": {
 	top:6,
   height:30,
   width:30,
-  left:10,
+  left:10
+},
+".date": {
+	top:2,
+	bottom:2,
+  height:Ti.UI.SIZE,
+  width:'85%',
+  left:43,
+  right:10,
+  color:'black',
+  font:  {
+    fontSize: 15,
+    fontFamily: "Open Sans"
+  }
 },
 "#scrollview": {
 	top:2,
 	left:0,
-	backgroundColor:"white",
+	backgroundColor:"#eeeeee",
 	width:"100%",
 	height:"100%",
 	layout: "vertical"
@@ -43,143 +72,24 @@
   },
   color:'white'
 },
-"#scheduleview":{
-	top:2,
-	height:Ti.UI.SIZE,
-	left:10,
-	right:10,
-	backgroundColor:'#eeeeee',
-	layout: "vertical",
-	borderRadius:10
-},
-"#scheduleimageView":{
-	top:0,
-	height:Ti.UI.SIZE,
-	left:0,
-	backgroundColor:'#eeeeee',
-	layout: "horizontal"
-},
-"#clockimage":{
+"#scheduleImage":{
   image: "/common/clock_icon.png"
 },
-"#pickup": {
-	top:2,
-	bottom:2,
-  height:Ti.UI.SIZE,
-  width:'80%',
-  left:43,
-  right:10,
-  color:'black',
-  font:  {
-    fontSize: 15,
-    fontFamily: "Open Sans"
-  }
-},
-"#destinationView":{
-	top:2,
-	height:Ti.UI.SIZE,
-	left:10,
-	right:10,
-	backgroundColor:'#eeeeee',
-	layout: "vertical",
-	borderRadius:10
-},
-"#destinationimage":{
+"#destinationImage":{
   image:"/common/destination_icon.png"
-}
-"#destinationimageView":{
-	top:0,
-	height:Ti.UI.SIZE,
-	left:0,
-	backgroundColor:'#eeeeee',
-	layout: "horizontal"
 },
-"#destinationvalue":{
-	top:2,
-	bottom:2,
-  height:Ti.UI.SIZE,
-  width:'85%',
-  left:43,
-  right:10,
-  color:'black',
-  font: {
-    fontSize: 15,
-    fontFamily: "Open Sans"
-  }
-},
-
-"#methodView":{
-	top:2,
-	height:Ti.UI.SIZE,
-	left:10,
-	right:10,
-	backgroundColor:'#eeeeee',
-	layout: "vertical",
-	borderRadius:10
-},
-"#methodimage":{
+"#methodImage":{
   image:"/common/method_icon.png"
 },
-"#methodimageView":{
-	top:0,
-	height:Ti.UI.SIZE,
-	left:0,
-	backgroundColor:'#eeeeee',
-	layout: "horizontal"
-},
-"#methodvalue":{
-	 top:2,
-	 bottom:2,
-   height:Ti.UI.SIZE,
-    width:'85%',
-    left:43,
-    right:10,
-    color:'black',
-      font:  {
-    fontSize: 15,
-    fontFamily: "Open Sans"
-    }
-},
-
 "#inclusionsImage":{
   image:"/common/check.png"
 }
-"#inclusionsImageView":{
-	top:0,
-	height:Ti.UI.SIZE,
-	left:0,
-	backgroundColor:'#e6f8da',
-	layout: "horizontal"
-},
 "#inclusionsView":{
-	top:2,
-	height:Ti.UI.SIZE,
-	left:10,
-	right:10,
-	backgroundColor:'#e6f8da',
-	layout: "vertical",
-	borderRadius:10
+	backgroundColor:'#e6f8da'
 },
-
 "#exclusionsImage":{
   image:"/common/cross.png"
 },
-"#exclusionsImageView":{
-	top:0,
-	height:Ti.UI.SIZE,
-	left:0,
-	backgroundColor:'#f8dada',
-	layout: "horizontal"
-},
 "#exclusionsView":{
-	top:2,
-	height:Ti.UI.SIZE,
-	left:10,
-	right:10,
-	backgroundColor:'#f8dada',
-	layout: "vertical",
-	bottom:2,
-	borderRadius:10
+	backgroundColor:'#f8dada'
 }
-
-

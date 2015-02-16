@@ -17,15 +17,17 @@ function showSuggestions(data) {
       description : element,
       height : 60,
       textAlign : "center",
+      backgroundColor : 'transparent',
+      top : 1,
       rightImage : '/common/keyboard-arrow-right.png',
     });
     /*
-    if (i % 2 == 0) {
-      resultRow.backgroundColor = "#eeeeee";
-    } else {
-      resultRow.backgroundColor = "#f2f2f2";
-    }
-   */
+     if (i % 2 == 0) {
+     resultRow.backgroundColor = "#eeeeee";
+     } else {
+     resultRow.backgroundColor = "#f2f2f2";
+     }
+     */
     tableData.push(resultRow);
   }
 

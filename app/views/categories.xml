@@ -6,36 +6,35 @@
 			<View id="categoryView">
 				<Label id="categoryLabel"></Label>
 			</View>
-			<Label id="popupLabel"></Label>
-			<View id="scheduleview">
-				<View id="scheduleimageView">
-					<ImageView class="icon" id="clockimage"></ImageView>
-					<Label class="heading" id="clockLabel">Schedule</Label>
+			<View id="scheduleView" class="infoView">
+				<View id="scheduleImageView" class="infoChaildView">
+					<ImageView class="icon" id="scheduleImage"></ImageView>
+					<Label class="heading" id="scheduleLabel">Schedule</Label>
 				</View>
-				<Label id="pickup"></Label>
+				<Label id="pickup" class="date" ></Label>
 			</View>
-			<View id="destinationView">
-				<View id="destinationimageView">
-					<ImageView class="icon" id="destinationimage"></ImageView>
+			<View id="destinationView" class="infoView">
+				<View id="destinationImageView" class="infoChaildView">
+					<ImageView class="icon" id="destinationImage"></ImageView>
 					<Label class="heading" id="destinationLabel">Destination</Label>
 				</View>
-				<Label id="destinationvalue"></Label>
+				<Label id="destinationValue" class="date"></Label>
 			</View>
-			<View id="methodView">
-				<View id="methodimageView">
-					<ImageView class="icon" id="methodimage"></ImageView>
+			<View id="methodView" class="infoView">
+				<View id="methodImageView" class="infoChaildView">
+					<ImageView class="icon" id="methodImage"></ImageView>
 					<Label class="heading" id="methodLabel">Method</Label>
 				</View>
-				<Label id="methodvalue"></Label>
+				<Label id="methodValue" class="date"></Label>
 			</View>
-			<View id="inclusionsView">
-				<View id="inclusionsImageView">
+			<View id="inclusionsView" class="infoView">
+				<View id="inclusionsImageView" class="infoChaildView">
 					<ImageView class="icon" id="inclusionsImage"></ImageView>
-					<Label class="heading" id="inclusionsLabel"> Inclusions </Label>
+					<Label class="heading" id="inclusionsLabel">Inclusions</Label>
 				</View>
 			</View>
-			<View id="exclusionsView">
-				<View id="exclusionsImageView">
+			<View id="exclusionsView" class="infoView">
+				<View id="exclusionsImageView" class="infoChaildView">
 					<ImageView class="icon" id="exclusionsImage"></ImageView>
 					<Label class="heading" id="exclusionsLabel">Exclusions</Label>
 				</View>

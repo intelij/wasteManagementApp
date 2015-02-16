@@ -3,7 +3,6 @@
 	backgroundColor: "#ffffff",
 },
 "#complexLabel":{
-	//text:"Where do you live?",
 	color:'black',
 	top:20,
 	left:20
@@ -11,9 +10,9 @@
 "#complexTable": {
 	top: 10,
 	width: "92%",
-	backgroundColor: "transparent",
+	backgroundColor: "#ffffff",
 	visible:true,
-	separatorColor: "white",
+	separatorColor: "#bebebe",
 },
 '#complexSearchbar': {
 	color:"black"

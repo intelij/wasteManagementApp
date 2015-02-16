@@ -24,7 +24,7 @@ function getInclusions() {
   inclusionsArray = params.inclusions.split(',');
   for (var i = 0; i < inclusionsArray.length; i++) {
     var view = Ti.UI.createView({
-      backgroundColor : '#e6f8da',
+      backgroundColor : 'transparent',
       layout : "horizontal",
       height : Ti.UI.SIZE,
       width : "100%",
@@ -60,7 +60,7 @@ function getExclusions() {
   exclusionsArray = params.exclusions.split(',');
   for (var i = 0; i < exclusionsArray.length; i++) {
     var view = Ti.UI.createView({
-      backgroundColor : '#f8dada',
+      backgroundColor : 'transparent',
       layout : "horizontal",
       height : Ti.UI.SIZE,
       width : "100%",
@@ -94,7 +94,7 @@ function getExclusions() {
 }
 
 if (params.inclusions) {
-  getInclusions();  
+  getInclusions();
 } else {
   $.inclusionsView.visible = false;
   $.inclusionsView.height = 0;
@@ -108,7 +108,7 @@ if (params.exclusions && typeof (params.exclusions) !== 'undefined') {
 }
 
 if (params.method && typeof (params.method) !== 'undefined') {
-  $.methodvalue.text = params.method;
+  $.methodValue.text = params.method;
 } else {
   $.methodView.visible = false;
   $.methodView.height = 0;
@@ -116,28 +116,15 @@ if (params.method && typeof (params.method) !== 'undefined') {
 
 if (params.destination && typeof (params.destination) !== 'undefined') {
   console.log(params.destination);
-  $.destinationvalue.text = params.destination;
+  $.destinationValue.text = params.destination;
 } else {
   $.destinationView.visible = false;
   $.destinationView.height = 0;
 }
 
 if (params.pickup == 'None') {
-  $.scheduleview.visible = false;
-  $.scheduleview.height = 0;
+  $.scheduleView.visible = false;
+  $.scheduleView.height = 0;
 } else {
   $.pickup.text = "" + params.pickup;
 }
-
-/*
- var clock = 0;
- $.clockimage.addEventListener('click', function(e) {
- if (clock == 0) {
- $.popupLabel.visible = true;
- clock = 1;
- } else {
- $.popupLabel.visible = false;
- clock = 0;
- }
- });*/
-

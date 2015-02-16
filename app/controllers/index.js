@@ -29,16 +29,19 @@ if (site_id == 0) {
       id : id,
       color : "black",
       description : element,
-      backgroundColor : "#cccccc",
+      backgroundColor : "transparent",
       height : 50,
+      top : 1,
       textAlign : "center",
       rightImage : '/common/keyboard-arrow-right.png',
     });
-    if (i % 2 == 0) {
-      resultRow.backgroundColor = "#e0e0e0";
-    } else {
-      resultRow.backgroundColor = "#eeeeee";
-    }
+    /*
+     if (i % 2 == 0) {
+     resultRow.backgroundColor = "#e0e0e0";
+     } else {
+     resultRow.backgroundColor = "#eeeeee";
+     }*/
+
     tableData.push(resultRow);
     $.complexTable.data = tableData;
   }
