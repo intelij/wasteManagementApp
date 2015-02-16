@@ -1,20 +1,21 @@
 ".container": {
 	layout: "vertical",
-	backgroundColor: "#ffffff",
+	backgroundColor: "#ffffff"
 },
 "#complexLabel":{
-	color:'black',
-	top:20,
-	left:20
+	color: 'black',
+	top: 20,
+	left: 20
 }
 "#complexTable": {
 	top: 10,
 	width: "92%",
 	backgroundColor: "#ffffff",
-	visible:true,
-	separatorColor: "#bebebe",
+	visible: true,
+	separatorColor: "#bebebe"
 },
 '#complexSearchbar': {
-	color:"black"
+	color: "black",
+	hintText: "Type to search"
 }
 

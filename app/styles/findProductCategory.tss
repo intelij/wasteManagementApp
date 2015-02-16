@@ -5,11 +5,19 @@
 
 "#resultsTable": {
 	top: 10,
-	height:0,
+	height: 0,
 	width: "92%",
 	backgroundColor: "#ffffff",
-	visible:true,
+	visible: true,
 	rowHeight: 60,
-	separatorColor: "#bebebe"
+	separatorColor: "#bebebe",
+	searchAsChild: false
+},
+"#searchbar": {
+	color: "black",
+	width: "92%",
+	height: 50,
+	top: 10,
+	hintText: "What do you want to dispose off?"
 }
 

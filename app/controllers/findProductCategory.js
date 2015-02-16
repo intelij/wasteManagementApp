@@ -5,6 +5,7 @@ var data = Alloy.Globals.categories;
 var auto = new autocomplete.autocomplete(data, synonyms);
 var complexId = params.id;
 var complexDetail = Alloy.Globals.sites[complexId];
+
 function showSuggestions(data) {
   var tableData = [];
   var keys = Object.keys(data);
@@ -21,13 +22,6 @@ function showSuggestions(data) {
       top : 1,
       rightImage : '/common/keyboard-arrow-right.png',
     });
-    /*
-     if (i % 2 == 0) {
-     resultRow.backgroundColor = "#eeeeee";
-     } else {
-     resultRow.backgroundColor = "#f2f2f2";
-     }
-     */
     tableData.push(resultRow);
   }
 
@@ -39,7 +33,7 @@ function showSuggestions(data) {
   } else {
     $.resultsTable.height = 0;
   }
-}
+};
 
 function getCategoryId(title) {
   var category;
@@ -49,13 +43,10 @@ function getCategoryId(title) {
     }
   });
   return category;
-}
+};
 
 function selectWord(e) {
-  console.log(e.rowData.title);
   var categoryID = getCategoryId(e.rowData.title);
-  console.log(categoryID);
-  console.log(complexDetail.classification);
   var typeId = complexDetail.classification[categoryID][0];
 
   var typeTitle = isNaN(typeId) ? typeId : complexDetail.types[typeId].title;
@@ -84,7 +75,7 @@ function searchWord(e) {
   } else {
     $.resultsTable.height = 0;
   }
-}
+};
 
 $.navbar.leftNav.addEventListener('click', function(e) {
   Alloy.createController('index').getView().open();
@@ -93,7 +84,4 @@ $.topbar.logout.addEventListener('click', function(e) {
   Alloy.createController('index').getView().open();
 });
 $.navbar.left.image = '/common/back_button.png';
-//$.navbar.right.image = '/common/settings.png';
-$.topbar.left.image = '/common/Small_logo.png';
-$.topbar.right.image = '/common/cog.png';
 $.navbar.setTitle(params.data);

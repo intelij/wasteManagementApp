@@ -1,9 +1,9 @@
 <Alloy>
 	<View class="container">
-		<View id="gotwaste" height="44" width="Ti.UI.SIZE" left="0" >
+		<View id="gotWaste" class="corner">
 			<ImageView id="left"/>
 		</View>
-		<View id="logout" height="44" width="Ti.UI.SIZE" right="0">
+		<View id="logout" class="corner">
 			<ImageView id="right"/>
 		</View>
 	</View>
