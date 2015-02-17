@@ -1,45 +1,65 @@
 <Alloy>
 	<Window class="container" navBarHidden="true">
-		<Require id="topbar" src="common/topbar"></Require>
-		<Require id="navbar" src="common/navbar"></Require>
+		<Require id="topbar" src="common/topbar">
+		</Require>
+		<Require id="navbar" src="common/navbar">
+		</Require>
 		<ScrollView  id="scrollview">
 			<View id="categoryView">
-				<Label id="categoryLabel"></Label>
+				<Label id="categoryLabel">
+				</Label>
 			</View>
 			<View id="scheduleView" class="infoMainView">
 				<View id="scheduleImageView" class="infoView">
-					<ImageView class="icon" id="scheduleImage"></ImageView>
-					<Label class="heading" id="scheduleLabel">Schedule</Label>
+					<ImageView class="icon" id="scheduleImage">
+					</ImageView>
+					<Label class="heading" id="scheduleLabel">
+						Schedule
+					</Label>
 				</View>
-				<Label id="pickup" class="date" ></Label>
+				<Label id="pickup" class="date" >
+				</Label>
 			</View>
 			<View id="destinationView" class="infoMainView">
 				<View id="destinationImageView" class="infoView">
-					<ImageView class="icon" id="destinationImage"></ImageView>
-					<Label class="heading" id="destinationLabel">Destination</Label>
+					<ImageView class="icon" id="destinationImage">
+					</ImageView>
+					<Label class="heading" id="destinationLabel">
+						Destination
+					</Label>
 				</View>
-				<Label id="destinationValue" class="date"></Label>
+				<Label id="destinationValue" class="date">
+				</Label>
 			</View>
 			<View id="methodView" class="infoMainView">
 				<View id="methodImageView" class="infoView">
-					<ImageView class="icon" id="methodImage"></ImageView>
-					<Label class="heading" id="methodLabel">Method</Label>
+					<ImageView class="icon" id="methodImage">
+					</ImageView>
+					<Label class="heading" id="methodLabel">
+						Method
+					</Label>
 				</View>
-				<Label id="methodValue" class="date"></Label>
+				<Label id="methodValue" class="date">
+				</Label>
 			</View>
 			<View id="inclusionsView" class="infoMainView">
 				<View id="inclusionsImageView" class="infoView">
-					<ImageView class="icon" id="inclusionsImage"></ImageView>
-					<Label class="heading" id="inclusionsLabel">Inclusions</Label>
+					<ImageView class="icon" id="inclusionsImage">
+					</ImageView>
+					<Label class="heading" id="inclusionsLabel">
+						Inclusions
+					</Label>
 				</View>
 			</View>
 			<View id="exclusionsView" class="infoMainView">
 				<View id="exclusionsImageView" class="infoView">
-					<ImageView class="icon" id="exclusionsImage"></ImageView>
-					<Label class="heading" id="exclusionsLabel">Exclusions</Label>
+					<ImageView class="icon" id="exclusionsImage">
+					</ImageView>
+					<Label class="heading" id="exclusionsLabel">
+						Exclusions
+					</Label>
 				</View>
 			</View>
-
 		</ScrollView>
 	</Window>
 </Alloy>

@@ -4,22 +4,6 @@ var tableDataexclusions = [];
 var inclusionsArray = [];
 var exclusionsArray = [];
 
-$.navbar.setTitle(params.data.title);
-//$.selectedtypelabel.text = params.data.title;
-//$.selectedtypeview.backgroundColor=params.backgroundcolor;
-$.categoryLabel.text = params.title;
-$.categoryView.backgroundColor = params.backgroundColor;
-$.topbar.left.image = '/common/Small_logo.png';
-$.topbar.right.image = '/common/cog.png';
-$.navbar.left.image = '/common/back_button.png';
-//$.navbar.right.image = '/common/settings.png';
-$.navbar.leftNav.addEventListener('click', function(e) {
-  $.categories.close();
-});
-$.topbar.logout.addEventListener('click', function(e) {
-  Alloy.createController('index').getView().open();
-});
-
 function getInclusions() {
   inclusionsArray = params.inclusions.split(',');
   for (var i = 0; i < inclusionsArray.length; i++) {
@@ -56,7 +40,6 @@ function getInclusions() {
 }
 
 function getExclusions() {
-  //$.exclusions.text = "Exclusions ";
   exclusionsArray = params.exclusions.split(',');
   for (var i = 0; i < exclusionsArray.length; i++) {
     var view = Ti.UI.createView({
@@ -91,40 +74,53 @@ function getExclusions() {
     view.add(aLabel);
     $.exclusionsView.add(view);
   }
-}
+};
 
-if (params.inclusions) {
-  getInclusions();
-} else {
-  $.inclusionsView.visible = false;
-  $.inclusionsView.height = 0;
-}
+(function setUI() {
+  if (params.inclusions) {
+    getInclusions();
+  } else {
+    $.inclusionsView.visible = false;
+    $.inclusionsView.height = 0;
+  }
 
-if (params.exclusions && typeof (params.exclusions) !== 'undefined') {
-  getExclusions();
-} else {
-  $.exclusionsView.visible = false;
-  $.exclusionsView.height = 0;
-}
+  if (params.exclusions && typeof (params.exclusions) !== 'undefined') {
+    getExclusions();
+  } else {
+    $.exclusionsView.visible = false;
+    $.exclusionsView.height = 0;
+  }
 
-if (params.method && typeof (params.method) !== 'undefined') {
-  $.methodValue.text = params.method;
-} else {
-  $.methodView.visible = false;
-  $.methodView.height = 0;
-}
+  if (params.method && typeof (params.method) !== 'undefined') {
+    $.methodValue.text = params.method;
+  } else {
+    $.methodView.visible = false;
+    $.methodView.height = 0;
+  }
 
-if (params.destination && typeof (params.destination) !== 'undefined') {
-  console.log(params.destination);
-  $.destinationValue.text = params.destination;
-} else {
-  $.destinationView.visible = false;
-  $.destinationView.height = 0;
-}
+  if (params.destination && typeof (params.destination) !== 'undefined') {
+    $.destinationValue.text = params.destination;
+  } else {
+    $.destinationView.visible = false;
+    $.destinationView.height = 0;
+  }
 
-if (params.pickup == 'None') {
-  $.scheduleView.visible = false;
-  $.scheduleView.height = 0;
-} else {
-  $.pickup.text = "" + params.pickup;
-}
+  if (params.pickup == 'None') {
+    $.scheduleView.visible = false;
+    $.scheduleView.height = 0;
+  } else {
+    $.pickup.text = "" + params.pickup;
+  }
+})();
+
+$.navbar.leftNav.addEventListener('click', function(e) {
+  $.categories.close();
+});
+$.topbar.settings.addEventListener('click', function(e) {
+  Alloy.createController('index').getView().open();
+});
+
+$.navbar.setTitle(params.data.title);
+$.categoryLabel.text = params.title;
+$.categoryView.backgroundColor = params.backgroundColor;
+$.navbar.left.image = '/common/back_button.png';

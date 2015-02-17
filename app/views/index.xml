@@ -1,10 +1,10 @@
 <Alloy>
 	<Window class="container" navBarHidden="true"  statusBarStyle="">
-		<Require id="topbar" src="common/topbar"></Require>
-		<Require id="navbar" src="common/navbar"></Require>
+		<Require id="topbar" src="common/topbar"/>
+		<Require id="navbar" src="common/navbar"/>
 		<Label id="complexLabel"></Label>
 		<TableView id="complexTable" onClick="selectComplex" >
-			<SearchBar id="complexSearchbar" hintText="Type to search" />
+			<SearchBar id="complexSearchbar" />
 		</TableView>
 	</Window>
 </Alloy>
