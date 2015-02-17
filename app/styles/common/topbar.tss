@@ -24,6 +24,6 @@
 "#gotWaste": {
 	left: 0
 }
-"#logout": {
+"#settings": {
 	right: 0
 }

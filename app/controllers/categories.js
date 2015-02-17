@@ -116,7 +116,7 @@ function getExclusions() {
 $.navbar.leftNav.addEventListener('click', function(e) {
   $.categories.close();
 });
-$.topbar.logout.addEventListener('click', function(e) {
+$.topbar.settings.addEventListener('click', function(e) {
   Alloy.createController('index').getView().open();
 });
 

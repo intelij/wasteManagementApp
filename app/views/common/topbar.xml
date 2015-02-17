@@ -3,7 +3,7 @@
 		<View id="gotWaste" class="corner">
 			<ImageView id="left"/>
 		</View>
-		<View id="logout" class="corner">
+		<View id="settings" class="corner">
 			<ImageView id="right"/>
 		</View>
 	</View>

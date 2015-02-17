@@ -80,7 +80,7 @@ function searchWord(e) {
 $.navbar.leftNav.addEventListener('click', function(e) {
   Alloy.createController('index').getView().open();
 });
-$.topbar.logout.addEventListener('click', function(e) {
+$.topbar.settings.addEventListener('click', function(e) {
   Alloy.createController('index').getView().open();
 });
 $.navbar.left.image = '/common/back_button.png';

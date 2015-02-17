@@ -14,6 +14,7 @@ function selectComplex(e) {
 
 (function init() {
   getHomeScreen();
+  $.topbar.settings.visible =  false;
   var keys = Object.keys(data);
   for (var i = 0; i < keys.length; i++) {
     var id = keys[i];
@@ -39,7 +40,6 @@ function selectComplex(e) {
 function getHomeScreen() {
   if (site_id == 0) {
     console.log('wasteApp', 'Site not found' + site_id);
-    $.navbar.settings.hide();
     $.index.open();
   } else {
     Alloy.createController('/findProductCategory', {
