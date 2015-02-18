@@ -3,36 +3,30 @@ var tableDatainclusion = [];
 var tableDataexclusions = [];
 var inclusionsArray = [];
 var exclusionsArray = [];
-
+var inclusionView = $.createStyle({
+    classes : 'inclusion_style',
+    apiName : 'View'
+  });
+  var bullet_style = $.createStyle({
+    classes : 'bullet_image',
+    apiName : 'Image'
+  });
+  var labelStyle = $.createStyle({
+    classes : 'label_style',
+    apiName : 'Label'
+  });
+  
 function getInclusions() {
   inclusionsArray = params.inclusions.split(',');
   for (var i = 0; i < inclusionsArray.length; i++) {
-    var view = Ti.UI.createView({
-      backgroundColor : 'transparent',
-      layout : "horizontal",
-      height : Ti.UI.SIZE,
-      width : "100%",
-      bottom : 2
-    });
-    var image = Ti.UI.createImageView({
-      left : 26,
-      height : 10,
-      width : 10,
-      image : "/common/bullet_point.png"
-    });
+    var view = Ti.UI.createView();
+    var image = Ti.UI.createImageView();
+    view.applyProperties(inclusionView);
+    image.applyProperties(bullet_style);
     var aLabel = Ti.UI.createLabel({
-      text : inclusionsArray[i].trim(),
-      color : 'black',
-      height : Ti.UI.SIZE,
-      width : '80%',
-      left : 5,
-      right : 5,
-      top : 2,
-      font : {
-        fontSize : 15,
-        fontFamily : "OpenSans-Regular"
-      }
+      text : inclusionsArray[i].trim()
     });
+    aLabel.applyProperties(labelStyle);
     view.add(image);
     view.add(aLabel);
     $.inclusionsView.add(view);
@@ -42,34 +36,14 @@ function getInclusions() {
 function getExclusions() {
   exclusionsArray = params.exclusions.split(',');
   for (var i = 0; i < exclusionsArray.length; i++) {
-    var view = Ti.UI.createView({
-      backgroundColor : 'transparent',
-      layout : "horizontal",
-      height : Ti.UI.SIZE,
-      width : "100%",
-      bottom : 2
-    });
-    var image = Ti.UI.createImageView({
-      left : 26,
-      top : 8,
-      height : 10,
-      width : 10,
-      image : "/common/bullet_point.png"
-    });
+   var view = Ti.UI.createView();
+    var image = Ti.UI.createImageView();
+    view.applyProperties(inclusionView);
+    image.applyProperties(bullet_style);
     var aLabel = Ti.UI.createLabel({
-      text : exclusionsArray[i].trim(),
-      color : 'black',
-      height : Ti.UI.SIZE,
-      width : '75%',
-      left : 5,
-      right : 10,
-      top : 2,
-      bottom : 1,
-      font : {
-        fontSize : 15,
-        fontFamily : "Open Sans"
-      }
+      text : exclusionsArray[i].trim()
     });
+    aLabel.applyProperties(labelStyle);
     view.add(image);
     view.add(aLabel);
     $.exclusionsView.add(view);
