@@ -30,7 +30,7 @@ function getInclusions() {
       top : 2,
       font : {
         fontSize : 15,
-        fontFamily : "Open Sans"
+        fontFamily : "OpenSans-Regular"
       }
     });
     view.add(image);

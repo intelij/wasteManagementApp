@@ -7,7 +7,8 @@
 	height:Ti.UI.SIZE,
 	left: 10,
 	right: 10,
-	backgroundColor: '#ffffff',
+	backgroundColor: "#ffffff",
+	backgroundImage: '/common/shadowAlpha.png',
 	layout: "vertical",
 	borderRadius: 10
 },
@@ -44,7 +45,7 @@
 	color: 'black',
 	font:  {
 		fontSize: 15,
-		fontFamily: "Open Sans"
+		fontFamily: "OpenSans-Regular"
 	}
 },
 "#scrollview": {
