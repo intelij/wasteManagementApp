@@ -6,6 +6,11 @@ var auto = new autocomplete.autocomplete(data, synonyms);
 var complexId = params.id;
 var complexDetail = Alloy.Globals.sites[complexId];
 
+var tableRow = $.createStyle({
+    classes : 'table_row',
+    apiName : 'TableViewRow'
+  });
+
 function showSuggestions(data) {
   var tableData = [];
   var keys = Object.keys(data);
@@ -14,14 +19,9 @@ function showSuggestions(data) {
     var element = data[id];
     var resultRow = Ti.UI.createTableViewRow({
       title : element.title,
-      color : "black",
       description : element,
-      height : 60,
-      textAlign : "center",
-      backgroundColor : 'transparent',
-      top : 1,
-      rightImage : '/common/keyboard-arrow-right.png',
     });
+    resultRow.applyProperties(tableRow);
     tableData.push(resultRow);
   }
 
