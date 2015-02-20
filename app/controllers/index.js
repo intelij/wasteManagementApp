@@ -2,6 +2,11 @@ var data = Alloy.Globals.sites;
 var tableData = [];
 var site_id = Ti.App.Properties.getInt('site_id', 0);
 
+var tableRow = $.createStyle({
+    classes : 'table_row',
+    apiName : 'TableViewRow'
+  });
+
 function selectComplex(e) {
   var complexID = e.rowData.id;
   console.log('complex id::' + complexID);
@@ -22,15 +27,9 @@ function selectComplex(e) {
     var resultRow = Ti.UI.createTableViewRow({
       title : element.name,
       id : id,
-      color : "black",
       description : element,
-      backgroundColor : "transparent",
-      height : 50,
-      top : 1,
-      textAlign : "center",
-      rightImage : '/common/keyboard-arrow-right.png',
     });
-
+		resultRow.applyProperties(tableRow);
     tableData.push(resultRow);
     $.complexTable.data = tableData;
   }

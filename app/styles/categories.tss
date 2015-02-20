@@ -1,6 +1,6 @@
 ".container": {
 	layout: "vertical",
-	backgroundColor: "#eeeeee"
+	backgroundColor: "#d6d6d6"
 },
 ".infoMainView":{
 	top: 2,

@@ -17,5 +17,12 @@
 '#complexSearchbar': {
 	color: "black",
 	hintText: "Type to search"
+},
+".table_row": {
+	color: "black",
+	backgroundColor: "transparent",
+	height: 50,
+	top: 1,
+	textAlign: "center",
+	rightImage: '/common/keyboard-arrow-right.png'
 }
-
