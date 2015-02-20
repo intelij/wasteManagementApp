@@ -91,6 +91,7 @@ $.navbar.leftNav.addEventListener('click', function(e) {
   $.categories.close();
 });
 $.topbar.settings.addEventListener('click', function(e) {
+	Ti.App.Properties.setInt('site_id', 0);
   Alloy.createController('index').getView().open();
 });
 

@@ -1,5 +1,5 @@
 <Alloy>
-	<Window class="container" navBarHidden="true"  statusBarStyle="">
+	<Window class="container" id="index">
 		<Require id="topbar" src="common/topbar"/>
 		<Require id="navbar" src="common/navbar"/>
 		<Label id="complexLabel"></Label>

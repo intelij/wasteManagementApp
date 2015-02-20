@@ -78,9 +78,10 @@ function searchWord(e) {
 };
 
 $.navbar.leftNav.addEventListener('click', function(e) {
-  Alloy.createController('index').getView().open();
+	$.findProductCategory.close();
 });
 $.topbar.settings.addEventListener('click', function(e) {
+	Ti.App.Properties.setInt('site_id', 0);
   Alloy.createController('index').getView().open();
 });
 $.navbar.left.image = '/common/back_button.png';

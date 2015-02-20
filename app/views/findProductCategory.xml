@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="index" class="container" navBarHidden="true">
+	<Window class="container">
 		<Require id="topbar" src="common/topbar"/>
 		<Require id="navbar" src="common/navbar"/>
 		<SearchBar id="searchbar" onChange="searchWord"/>
