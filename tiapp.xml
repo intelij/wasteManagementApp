@@ -2,16 +2,16 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <property name="acs-api-key-production" type="string">PdQZeL44WVLmgSSBQvJdVGn5mv0TszBv</property>
     <property name="acs-api-key-development" type="string">0gjAA30PC7FNVPARiPrLBiHyrKKO5eSe</property>
-    <id>com.mirafra.wasteApp</id>
+    <id>com.mirafra.wasteAppProto</id>
     <name>wasteManagementApp</name>
-    <version>1.0</version>
+    <version>1.1</version>
     <publisher>Mirafra_Mac1</publisher>
     <url>http://</url>
     <description>undefined</description>
     <copyright>2015 by Mirafra_Mac1</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
-    <navbar-hidden>false</navbar-hidden>
+    <navbar-hidden>true</navbar-hidden>
     <analytics>true</analytics>
     <guid>4e5c98b7-538e-4f56-9843-f8c7720c27f7</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
@@ -40,7 +40,9 @@
             </dict>
         </plist>
     </ios>
-    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest android:versionCode="4" android:versionName="4"/>
+    </android>
     <mobileweb>
         <precache/>
         <splash>
@@ -59,7 +61,7 @@
         <target device="iphone">true</target>
         <target device="mobileweb">true</target>
     </deployment-targets>
-    <sdk-version>3.2.2.GA</sdk-version>
+    <sdk-version>3.5.0.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
