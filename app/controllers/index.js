@@ -36,11 +36,11 @@ function selectComplex(e) {
   }
   $.navbar.setTitle("Where do you live");
 })();
-
 function getHomeScreen() {
   if (site_id == 0) {
     console.log('wasteApp', 'Site not found' + site_id);
     $.index.open();
+    
   } else {
     Alloy.createController('/findProductCategory', {
       data : data[site_id].name,
@@ -49,3 +49,4 @@ function getHomeScreen() {
     console.log('wasteApp', 'Site is ' + site_id);
   }
 }
+
