@@ -55,7 +55,7 @@ function selectWord(e) {
   var typeMethod = isNaN(typeId) ? null : complexDetail.types[typeId].method;
   var typeInclusions = isNaN(typeId) ? null : complexDetail.types[typeId].inclusions;
   var typeExclusions = isNaN(typeId) ? null : complexDetail.types[typeId].exclusions;
-  var backgroundColor = isNaN(typeId) ? "000000" : complexDetail.types[typeId].backgroundColor;
+  var backgroundColor = isNaN(typeId) ? "#202020" : complexDetail.types[typeId].backgroundColor;
   Alloy.createController('/categories', {
     data : e.rowData,
     title : typeTitle,

@@ -4,18 +4,18 @@ var tableDataexclusions = [];
 var inclusionsArray = [];
 var exclusionsArray = [];
 var inclusionView = $.createStyle({
-    classes : 'inclusion_style',
-    apiName : 'View'
-  });
-  var bullet_style = $.createStyle({
-    classes : 'bullet_image',
-    apiName : 'Image'
-  });
-  var labelStyle = $.createStyle({
-    classes : 'label_style',
-    apiName : 'Label'
-  });
-  
+  classes : 'inclusion_style',
+  apiName : 'View'
+});
+var bullet_style = $.createStyle({
+  classes : 'bullet_image',
+  apiName : 'Image'
+});
+var labelStyle = $.createStyle({
+  classes : 'label_style',
+  apiName : 'Label'
+});
+
 function getInclusions() {
   inclusionsArray = params.inclusions.split(',');
   for (var i = 0; i < inclusionsArray.length; i++) {
@@ -36,7 +36,7 @@ function getInclusions() {
 function getExclusions() {
   exclusionsArray = params.exclusions.split(',');
   for (var i = 0; i < exclusionsArray.length; i++) {
-   var view = Ti.UI.createView();
+    var view = Ti.UI.createView();
     var image = Ti.UI.createImageView();
     view.applyProperties(inclusionView);
     image.applyProperties(bullet_style);
@@ -79,7 +79,7 @@ function getExclusions() {
     $.destinationView.height = 0;
   }
 
-  if (params.pickup == 'None') {
+  if (params.pickup == 'None' || !params.pickup) {
     $.scheduleView.visible = false;
     $.scheduleView.height = 0;
   } else {
@@ -91,7 +91,7 @@ $.navbar.leftNav.addEventListener('click', function(e) {
   $.categories.close();
 });
 $.topbar.settings.addEventListener('click', function(e) {
-	Ti.App.Properties.setInt('site_id', 0);
+  Ti.App.Properties.setInt('site_id', 0);
   Alloy.createController('index').getView().open();
 });
 
