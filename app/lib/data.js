@@ -1163,7 +1163,7 @@ var data = {
         "219" : [4, null],
         "220" : [1, null],
         "221" : [4, null],
-        "222" : [null, null],
+        "222" : ["Unknown", null],
         "223" : [11, null],
         "224" : [1, null],
         "225" : [4, null],
@@ -1180,7 +1180,7 @@ var data = {
         "236" : [2, null],
         "237" : [1, null],
         "238" : [1, null],
-        "239" : [null, null],
+        "239" : ["Unknown", null],
         "240" : [4, null],
         "241" : [10, null],
         "242" : [10, null],
@@ -1191,8 +1191,8 @@ var data = {
         "247" : [13, 1],
         "248" : [4, null],
         "249" : [13, 4],
-        "250" : [null, null],
-        "251" : [null, null],
+        "250" : ["Unknown", null],
+        "251" : ["Unknown", null],
         "252" : [1, null],
         "253" : [4, null],
         "254" : [1, null]
@@ -1208,7 +1208,8 @@ var data = {
           "schedule" : "Monday, Wednesday, Friday",
           "method" : "Put directly without bag in Brown Bin. Leave in front of your house with Red and or Green bin since its picked up on the same day.",
           "inclusions" : "Dirt, Broken , Coconut Shells, Sugarcane, Corn cobs, Mango Kernel, Nut shells, Soiled Paper, Large/Hard Bones",
-          "exclusions" : null
+          "exclusions" : null,
+          "backgroundColor" : "#202020"
         },
         "2" : {
           "title" : "Dry Waste: Blue Drum",
@@ -1216,7 +1217,8 @@ var data = {
           "schedule" : "Tuesday, Thursday",
           "method" : "Ensure that all discarded items are free of food remains. If they cannot be cleaned, put in the General Waste.",
           "inclusions" : "Regular/Glossy/Plastic Coated Paper, Advert Pamphlets, Receipts/Bills/Statements, Childrenâ€™s Craft Paper, Chart Paper, Paper Cups and Plates, Pizza/Cereal Boxes/Cartons, Packing Cardboard, Magazines/Books, Rinse dried milk bags, rinse dried tetrapacks, kurkure packets, egg cartons. Glass, Can, Basically anything dr, Thermocol",
-          "exclusions" : "No soiled paper/tissue."
+          "exclusions" : "No soiled paper/tissue.",
+          "backgroundColor" : "#202020"
         },
         "3" : {
           "title" : "Kitchen Waste (Food): Green Bucket",
@@ -1224,7 +1226,8 @@ var data = {
           "schedule" : "Monday, Wednesday, Friday",
           "method" : "Use the Green Bucket with absolutely no plastic bag. A thin newspaper lining on the bottom is ok.  Make sure big items like melon rind/pineapple heads are cut into 1-2 inch pieces.",
           "inclusions" : "Vegetable and Fruit Peels/Discards, Leftover Food and Readymade Snacks, Meat/Small and Soft Bones, Grains/Pulses/Flour/Nuts, Milk/Curd, Cut melon rind/ Cauliflower/Pineapple heads",
-          "exclusions" : "Coconut shells. No plastics or any other non degradeable substance. "
+          "exclusions" : "Coconut shells. No plastics or any other non degradeable substance. ",
+          "backgroundColor" : "#202020"
         },
         "4" : {
           "title" : "Sanitary Waste :Yellow Bag: Red Bucket",
@@ -1232,7 +1235,8 @@ var data = {
           "schedule" : "Monday, Wednesday, Friday",
           "method" : "Put without wrapping into Yellow bag.  Tie Properly. Put into Red Bucket with lid outside your house.",
           "inclusions" : "Sanitary Napkins/Panty Liners/ Contraceptives, Diapers, Dressings/Bandages, Cotton Swabs/Cloth with or without blood/nail paint/makeup remover, Hair, Any other contaminated material, All infected and lab waste",
-          "exclusions" : "Sharps like needles/scalpels"
+          "exclusions" : "Sharps like needles/scalpels",
+          "backgroundColor" : "#202020"
         },
         "5" : {
           "title" : "Sharp Medical waste: Small Cardboard box: Red Bucket",
@@ -1240,7 +1244,8 @@ var data = {
           "schedule" : "Monday, Wednesday, Friday",
           "method" : "Put into Red Bucket. ",
           "inclusions" : "sharp maerials like needles, scalpels etc.",
-          "exclusions" : null
+          "exclusions" : null,
+          "backgroundColor" : "#202020"
         },
         "6" : {
           "title" : "Plastic Medical Waste: Blue bag: Red Bucket",
@@ -1248,7 +1253,8 @@ var data = {
           "schedule" : "Monday, Wednesday, Friday",
           "method" : "For medical waste like syringes without needles, gloves catheters etc.",
           "inclusions" : "Used plastic material, Syringes without needles, gloves, tubes, catheters",
-          "exclusions" : "No needles or other sharp objects."
+          "exclusions" : "No needles or other sharp objects.",
+          "backgroundColor" : "#202020"
         },
         "7" : {
           "title" : "Expired Medicine: Blue Bag Red Bucket",
@@ -1256,7 +1262,8 @@ var data = {
           "schedule" : "Monday, Wednesday, Friday",
           "method" : "Used and expired medicines go into the collection box in the clubhouse.",
           "inclusions" : "All unused and expired medicines",
-          "exclusions" : "No syringes scalpels or sharp objects"
+          "exclusions" : "No syringes scalpels or sharp objects",
+          "backgroundColor" : "#202020"
         },
         "8" : {
           "title" : "E-Waste: Drop in Central Bin",
@@ -1264,7 +1271,8 @@ var data = {
           "schedule" : "Collection box near ATM by the tennis courts",
           "method" : "Drop gently into box left outside the ATM under tennis court",
           "inclusions" : "Mercury and Alkaline batteries, cells, wires, switch boxes, UPS, CD's, laptop, all chargers, hotplate, iron, microwave",
-          "exclusions" : "No bulbs, tube lights, thermometers, car/scooter batteries."
+          "exclusions" : "No bulbs, tube lights, thermometers, car/scooter batteries.",
+          "backgroundColor" : "#202020"
         },
         "9" : {
           "title" : "Bulbs, Tubelights: Drop in Central Bin",
@@ -1272,7 +1280,8 @@ var data = {
           "schedule" : "Collection box near ATM by the tennis courts",
           "method" : "Wrap in original box or in newspaper and leave in special bin outside club house",
           "inclusions" : "Any bulb or tubelights",
-          "exclusions" : "No other waste in this as the bulbs will break"
+          "exclusions" : "No other waste in this as the bulbs will break",
+          "backgroundColor" : "#202020"
         },
         "10" : {
           "title" : "Tetrapack: Devika or Samarthanam",
@@ -1280,7 +1289,8 @@ var data = {
           "schedule" : null,
           "method" : "Drop rinsed and dried Tetrapacks to Villa 61/2 for Joy At Work Womens Trust",
           "inclusions" : "All tetrapacks that are rinsed and dried",
-          "exclusions" : "No milk bags (like nandini plastic bags)"
+          "exclusions" : "No milk bags (like nandini plastic bags)",
+          "backgroundColor" : "#202020"
         },
         "11" : {
           "title" : "Flushable",
@@ -1288,7 +1298,8 @@ var data = {
           "schedule" : null,
           "method" : null,
           "inclusions" : "Milk, Yogurt, Juices, Dog Poop",
-          "exclusions" : "Cat Poop, Chemicals like paints/lubricants."
+          "exclusions" : "Cat Poop, Chemicals like paints/lubricants.",
+          "backgroundColor" : "#202020"
         },
         "12" : {
           "title" : "Garden Waste",
@@ -1296,7 +1307,8 @@ var data = {
           "schedule" : null,
           "method" : "Your gardener needs to take it to the shredder near clubhouse.",
           "inclusions" : "leaves,stems.",
-          "exclusions" : "No stems thicker than 1-2 inches "
+          "exclusions" : "No stems thicker than 1-2 inches ",
+          "backgroundColor" : "#202020"
         },
         "13" : {
           "title" : "Charity",
@@ -1304,7 +1316,8 @@ var data = {
           "schedule" : "Special Call",
           "method" : "Call Medappa to inform and then leave out your item (On your property)",
           "inclusions" : "Couch, Table, Sofa etc",
-          "exclusions" : "Broken or dilapilated stuff. These may need to go to Landfill"
+          "exclusions" : "Broken or dilapilated stuff. These may need to go to Landfill",
+          "backgroundColor" : "#202020"
         }
       },
       "classification" : {
@@ -1546,7 +1559,7 @@ var data = {
         "236" : [2, null],
         "237" : [2, null],
         "238" : [1, null],
-        "239" : [null, null],
+        "239" : ["Unknown", null],
         "240" : [2, null],
         "241" : [8, null],
         "242" : [8, null],
@@ -1916,7 +1929,7 @@ var data = {
         "219" : [4, null],
         "220" : [1, null],
         "221" : [4, null],
-        "222" : [null, null],
+        "222" : ["Unknown", null],
         "223" : [11, null],
         "224" : [1, null],
         "225" : [4, null],
@@ -1933,7 +1946,7 @@ var data = {
         "236" : [2, null],
         "237" : [1, null],
         "238" : [1, null],
-        "239" : [null, null],
+        "239" : ["Unknown", null],
         "240" : [4, null],
         "241" : [10, null],
         "242" : [10, null],
@@ -1944,8 +1957,8 @@ var data = {
         "247" : [13, 1],
         "248" : [4, null],
         "249" : [13, 4],
-        "250" : [null, null],
-        "251" : [null, null],
+        "250" : ["Unknown", null],
+        "251" : ["Unknown", null],
         "252" : [1, null],
         "253" : [4, null],
         "254" : [1, null]

@@ -3,7 +3,7 @@
     <property name="acs-api-key-production" type="string">PdQZeL44WVLmgSSBQvJdVGn5mv0TszBv</property>
     <property name="acs-api-key-development" type="string">0gjAA30PC7FNVPARiPrLBiHyrKKO5eSe</property>
     <id>com.mirafra.wasteApp</id>
-    <name>wasteManagementApp</name>
+    <name>Got Waste</name>
     <version>1.0</version>
     <publisher>Mirafra_Mac1</publisher>
     <url>http://</url>
