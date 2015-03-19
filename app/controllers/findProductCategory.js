@@ -7,9 +7,13 @@ var complexId = params.id;
 var complexDetail = Alloy.Globals.sites[complexId];
 
 var tableRow = $.createStyle({
-    classes : 'table_row',
-    apiName : 'TableViewRow'
-  });
+  classes : 'table_row',
+  apiName : 'TableViewRow'
+});
+
+function hideKeypad(e) {
+  $.searchbar.blur();
+}
 
 function showSuggestions(data) {
   var tableData = [];
@@ -29,7 +33,7 @@ function showSuggestions(data) {
     $.resultsTable.data = tableData;
     var rowCount = $.resultsTable.getSections()[0].rowCount;
     var rowHeight = $.resultsTable.rowHeight;
-    $.resultsTable.height = (rowCount * rowHeight);
+    $.resultsTable.height = (7 * rowHeight);
   } else {
     $.resultsTable.height = 0;
   }
@@ -46,6 +50,7 @@ function getCategoryId(title) {
 };
 
 function selectWord(e) {
+	hideKeypad();
   var categoryID = getCategoryId(e.rowData.title);
   var typeId = complexDetail.classification[categoryID][0];
 
@@ -78,11 +83,12 @@ function searchWord(e) {
 };
 
 $.navbar.leftNav.addEventListener('click', function(e) {
-	$.findProductCategory.close();
+  $.findProductCategory.close();
 });
 $.topbar.settings.addEventListener('click', function(e) {
-	Ti.App.Properties.setInt('site_id', 0);
+  Ti.App.Properties.setInt('site_id', 0);
   Alloy.createController('index').getView().open();
 });
-$.navbar.left.image = '/common/back_button.png';
-$.navbar.setTitle(params.data);
+$.navbar.left.image =  '/common/back_button.png';
+$.navbar.leftNav.visible = (params.index == 0) ? false : true;
+$.navbar.setTitle(params.data); 

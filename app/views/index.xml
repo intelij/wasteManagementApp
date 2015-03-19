@@ -1,10 +1,10 @@
 <Alloy>
-	<Window class="container" id="index">
+	<Window class="container" id="index" onFocus="hideKeypad">
 		<Require id="topbar" src="common/topbar"/>
 		<Require id="navbar" src="common/navbar"/>
 		<Label id="complexLabel"></Label>
 		<TableView id="complexTable" onClick="selectComplex" >
-			<SearchBar id="complexSearchbar" />
+			<SearchBar id="complexSearchbar"/>
 		</TableView>
 	</Window>
 </Alloy>
