@@ -6,18 +6,16 @@
 	left: 0
 },
 ".corner": {
-	height: 44,
+	top: 2,
+	bottom: 2,
 	width:Ti.UI.SIZE,
 },
 "#left": {
-	height: 16,
-	width: 152,
 	left: 5,
 	image: '/common/Small_logo.png'
 },
 "#right":{
-	height: 28,
-	width: 26,
+	
 	right: 5,
 	image: '/common/cog.png'
 },

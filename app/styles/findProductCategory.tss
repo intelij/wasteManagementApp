@@ -19,6 +19,7 @@
 	height: 50,
 	top: 10,
 	hintText: "What do you want to dispose off?"
+
 },
 ".table_row": {
 	color: "black",
