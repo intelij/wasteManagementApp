@@ -3,7 +3,9 @@
 		<Require id="topbar" src="common/topbar"/>
 		<Require id="navbar" src="common/navbar"/>
 		<SearchBar id="searchbar" onChange="searchWord" onReturn="hideKeypad"/>
-		<TableView id="resultsTable" onClick="selectWord" >
-		</TableView>
+		<ScrollView>
+			<TableView id="resultsTable" onClick="selectWord" >
+			</TableView>
+		</ScrollView>
 	</Window>
 </Alloy>
