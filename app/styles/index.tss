@@ -12,11 +12,12 @@
 	width: "92%",
 	backgroundColor: "#ffffff",
 	visible: true,
+	height: Ti.UI.SIZE,
 	separatorColor: "#bebebe"
 },
 '#complexSearchbar': {
 	color: "black",
-	hintText: "Type to search"
+	hintText: "Type to search",
 },
 ".table_row": {
 	color: "black",

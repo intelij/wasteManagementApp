@@ -33,9 +33,8 @@ function showSuggestions(data) {
     $.resultsTable.data = tableData;
     var rowCount = $.resultsTable.getSections()[0].rowCount;
     var rowHeight = $.resultsTable.rowHeight;
-    $.resultsTable.height = (7 * rowHeight);
+    $.resultsTable.height = Ti.UI.SIZE;
   } else {
-    $.resultsTable.height = 0;
   }
 };
 
@@ -53,7 +52,6 @@ function selectWord(e) {
 	hideKeypad();
   var categoryID = getCategoryId(e.rowData.title);
   var typeId = complexDetail.classification[categoryID][0];
-
   var typeTitle = isNaN(typeId) ? typeId : complexDetail.types[typeId].title;
   var typePickup = isNaN(typeId) ? null : complexDetail.types[typeId].schedule || 'None';
   var typeDestination = isNaN(typeId) ? null : complexDetail.types[typeId].destination;
@@ -69,7 +67,7 @@ function selectWord(e) {
     method : typeMethod,
     inclusions : typeInclusions,
     exclusions : typeExclusions,
-    backgroundColor : backgroundColor
+    backgroundColor : backgroundColor || "#202020"
   }).getView().open();
 }
 

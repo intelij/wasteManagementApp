@@ -5,11 +5,11 @@
 
 "#resultsTable": {
 	top: 10,
-	height: 0,
+	//height: 0,
 	width: "92%",
 	backgroundColor: "#ffffff",
 	visible: true,
-	rowHeight: 60,
+	height: Ti.UI.SIZE,
 	separatorColor: "#bebebe",
 	searchAsChild: false
 },
