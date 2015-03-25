@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
+    <deployment-targets>
+        <target device="mobileweb">false</target>
+        <target device="iphone">true</target>
+        <target device="ipad">false</target>
+        <target device="blackberry">false</target>
+        <target device="android">true</target>
+    </deployment-targets>
     <property name="acs-api-key-production" type="string">PdQZeL44WVLmgSSBQvJdVGn5mv0TszBv</property>
     <property name="acs-api-key-development" type="string">0gjAA30PC7FNVPARiPrLBiHyrKKO5eSe</property>
-    <id>com.mirafra.wasteApp</id>
-    <name>Got Waste</name>
+    <id>com.mirafra.wasteAppProto</id>
+    <name>GotWaste</name>
     <version>1.0</version>
     <publisher>Mirafra_Mac1</publisher>
     <url>http://</url>
@@ -41,31 +48,11 @@
         </plist>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-    <manifest>
-        <application android:theme="@style/Theme.NoActionBar"/>
-        <!-- Need to specify at least API level 11 for Titanium SDK 3.2.x and prior -->
-        <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19"/>
-    </manifest>
-</android>
-    <mobileweb>
-        <precache/>
-        <splash>
-            <enabled>true</enabled>
-            <inline-css-images>true</inline-css-images>
-        </splash>
-        <theme>default</theme>
-    </mobileweb>
-    <modules>
-        <module platform="commonjs">ti.cloud</module>
-    </modules>
-    <deployment-targets>
-        <target device="android">true</target>
-        <target device="blackberry">false</target>
-        <target device="ipad">true</target>
-        <target device="iphone">true</target>
-        <target device="mobileweb">true</target>
-    </deployment-targets>
-    <sdk-version>3.4.1.GA</sdk-version>
+        <manifest android:versionCode="6" android:versionName="6">
+            <application android:theme="@style/Theme.NoActionBar"/>
+        </manifest>
+    </android>
+    <sdk-version>3.4.0.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
