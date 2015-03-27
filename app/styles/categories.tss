@@ -63,11 +63,12 @@
 	borderRadius: 10
 },
 "#categoryLabel": {
-	height:Ti.UI.SIZE,
-	width: '100%',
+	top: 0,
+	bottom: 0,
+	right: 10,
 	left: 10,
 	font:  {
-		fontSize: 22,
+		fontSize: 20,
 		fontFamily: "Oswald-Light"
 	},
 	color: 'white'
