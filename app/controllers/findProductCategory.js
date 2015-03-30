@@ -1,7 +1,7 @@
 var params = arguments[0] || {};
 var autocomplete = require('autocomplete');
 var synonyms = require('data').data.synonyms;
-var data = Alloy.Globals.categories;
+var data = params.categories;
 var auto = new autocomplete.autocomplete(data, synonyms);
 var complexId = params.id;
 var complexDetail = Alloy.Globals.sites[complexId];

@@ -19,7 +19,8 @@ function selectComplex(e) {
   Alloy.createController('/findProductCategory', {
     data : e.rowData.title,
     id : complexID,
-    index: 1
+    index: 1,
+    categories: e.rowData.categories
   }).getView().open();
 }
 
@@ -34,6 +35,7 @@ function selectComplex(e) {
       title : element.name,
       id : id,
       description : element,
+      categories: element.categories
     });
     resultRow.applyProperties(tableRow);
     tableData.push(resultRow);
@@ -50,7 +52,8 @@ function getHomeScreen() {
     Alloy.createController('/findProductCategory', {
       data : data[site_id].name,
       id : site_id,
-      index: 0
+      index: 0,
+      categories: data[site_id].categories
     }).getView().open();
     console.log('wasteApp', 'Site is ' + site_id);
   }
