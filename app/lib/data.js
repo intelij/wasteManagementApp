@@ -570,7 +570,7 @@ var data = {
         },
         "2" : {
           "title" : "White Bag - Paper/Cardboard",
-          "destination" : "Smarthanam",
+          "destination" : "Samarthanam",
           "schedule" : "Tuesday, Saturday",
           "method" : "Ensure that all discarded items are free of food remains. If they cannot be cleaned, put in the General Waste.",
           "inclusions" : "Regular/Glossy/Plastic Coated Paper, Advert Pamphlets, Receipts/Bills/Statements, Children’s Craft Paper, Chart Paper, Paper Cups and Plates, Pizza/Cereal Boxes/Cartons, Packing Cardboard, Magazines/Books",
@@ -588,7 +588,7 @@ var data = {
         },
         "4" : {
           "title" : "Light Blue Bag - Plastics/Metal/Tetrapak",
-          "destination" : "Smarthanam",
+          "destination" : "Samarthanam",
           "schedule" : "Tuesday, Saturday",
           "method" : "Rinse all containers before discarding.",
           "inclusions" : "Plastic carry/packing bags, Milk/oil/snack/chips/candy sachet and wrappers, Plastic items like brushes/spoons/toothpaste tubes, All kinds of containers/cans/bottles/lids, Pipes/nuts/bolts/aluminium foil, Tetrapak pouches and cartons, Styrofoam/Thermocol, Empty medicine blisters",
@@ -615,7 +615,7 @@ var data = {
         },
         "7" : {
           "title" : "Glass Bottles",
-          "destination" : "Smarthanam",
+          "destination" : "Samarthanam",
           "schedule" : "Monday",
           "method" : null,
           "inclusions" : "Empty glass bottles and jars.",
@@ -642,7 +642,7 @@ var data = {
         },
         "10" : {
           "title" : "E-Waste",
-          "destination" : "Smarthanam",
+          "destination" : "Samarthanam",
           "schedule" : "Collection box in the clubhouse",
           "method" : null,
           "inclusions" : "Mercury and Alkaline batteries, cells, wires, switch boxes, UPS, CD's, laptop, all chargers, hotplate, iron, microwave",
@@ -651,7 +651,7 @@ var data = {
         },
         "11" : {
           "title" : "Newspaper",
-          "destination" : "Smarthanam",
+          "destination" : "Samarthanam",
           "schedule" : "Tuesday",
           "method" : null,
           "inclusions" : "Daily newspapers, supplements, pamphlets",
@@ -1214,7 +1214,7 @@ var data = {
         },
         "2" : {
           "title" : "Dry Waste: Recyclable: Blue Drum or Large White bag provided",
-          "destination" : "Smarthanam",
+          "destination" : "Samarthanam",
           "schedule" : "Tuesday, Thursday",
           "method" : "Ensure that all discarded items are free of food remains. If they cannot be cleaned, put in the General Waste.",
           "inclusions" : "Regular/Glossy/Plastic Coated Paper, Advert Pamphlets, Receipts/Bills/Statements, ChildrenХs Craft Paper, Chart Paper, Paper Cups and Plates, Pizza/Cereal Boxes/Cartons, Packing Cardboard, Magazines/Books, Rinse dried milk bags, rinse dried tetrapacks, kurkure packets, egg cartons. Glass, Can, Basically anything dr, Thermocol",
@@ -1262,7 +1262,7 @@ var data = {
         },
         "8" : {
           "title" : "E-Waste: Drop in Central Bin. If Large, can be kept outside home",
-          "destination" : "Smarthanam",
+          "destination" : "Samarthanam",
           "schedule" : "Collection box near ATM by the tennis courts. Tuesdays/Thursdays",
           "method" : "Drop gently into box left outside the ATM under tennis court",
           "inclusions" : "Mercury and Alkaline batteries, cells, wires, switch boxes, UPS, CD's, laptop, all chargers, hotplate, iron, microwave",
@@ -1270,7 +1270,7 @@ var data = {
         },
         "9" : {
           "title" : "Bulbs, Tubelights: Drop in Central Bin",
-          "destination" : "Smarthanam",
+          "destination" : "Samarthanam",
           "schedule" : "Collection box near ATM by the tennis courts",
           "method" : "Wrap in original box or in newspaper and leave in special bin outside club house",
           "inclusions" : "Any bulb or tubelights",
