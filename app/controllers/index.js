@@ -39,7 +39,7 @@ function selectComplex(e) {
     tableData.push(resultRow);
     $.complexTable.data = tableData;
   }
-  $.navbar.setTitle("Where do you live");
+  $.navbar.setTitle("Where do you live?");
 })();
 function getHomeScreen() {
   if (site_id == 0) {
